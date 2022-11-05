@@ -21,3 +21,13 @@ MonoBehaviour:
     _constantValue: 0
     _variable: {fileID: 0}
   portrait: {fileID: 21300000, guid: fe7b5794ba43a5c4895861f02b855b10, type: 3}
+  insults:
+    items:
+    - key: 1
+      value:
+      - {fileID: 11400000, guid: 06e6a556a3203044eb51c818e4e49269, type: 2}
+      - {fileID: 11400000, guid: 7e0c9e18dc50310439348e483512b69d, type: 2}
+    - key: 0
+      value:
+      - {fileID: 11400000, guid: 76a28fc4d8e6dba43b9f74121bd65b51, type: 2}
+      - {fileID: 11400000, guid: 4a7f618528c69e847b3254e4791fec6e, type: 2}
