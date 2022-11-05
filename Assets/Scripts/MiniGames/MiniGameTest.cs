@@ -1,4 +1,5 @@
 using System.Collections;
+using Dummerhuan.Combat;
 using ScriptableObjectArchitecture;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -7,7 +8,8 @@ namespace Dummerhuan.MiniGames {
     public class MiniGameTest : MonoBehaviour, IMiniGame {
 
         [SerializeField] private FloatReference playerCurrentHealth;
-        [SerializeField] private bool finished = false; 
+        [SerializeField] private bool finished = false;
+        [SerializeField] private float damage = 40f;
 
         protected void Update() {
             var keyboard = Keyboard.current;
@@ -15,10 +17,14 @@ namespace Dummerhuan.MiniGames {
                 finished = true;
             }
         }
-        
+
+        public void Setup(Effectiveness effectiveness) {
+            
+        }
+
         public IEnumerator Execute() {
             yield return new WaitUntil(() => finished);
-            playerCurrentHealth.Value -= 10f;
+            playerCurrentHealth.Value -= damage;
             yield return new WaitForSeconds(0.5f);
             End();
         }

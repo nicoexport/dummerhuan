@@ -3,46 +3,60 @@ using System.Collections;
 using Dummerhuan.MiniGames;
 using Dummerhuan.References;
 using MyBox;
+using ScriptableObjectArchitecture;
 using Unity.Mathematics;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using Random = UnityEngine.Random;
 
 namespace Dummerhuan.Combat {
     public class CombatManager : Singleton<CombatManager> {
         [SerializeField] private EnemySOReference currentEnemy;
         [SerializeField] private Vector3 miniGameSpawnOffset;
+        [SerializeField] private FloatReference playerMaxHealth;
+        [SerializeField] private FloatReference playerCurrentHealth;
+        [SerializeField] private TextBoxUI enemyTextBox;
+        [SerializeField] private TextBoxUI playerTextBox;
+
+        [SerializeField] private Effectiveness effi;
 
         private InsultSO intendedInsult;
         private Coroutine combatCoroutine;
         private IMiniGame currentMiniGame;
+        private InsultType intendedInsultType;
         
+
         protected void Awake() {
             if (combatCoroutine != null) {
                 StopCoroutine(combatCoroutine);
             }
 
             combatCoroutine = StartCoroutine(CombatLoop_Co());
+
+            playerCurrentHealth.Value = playerMaxHealth.Value;
         }
 
         private IEnumerator CombatLoop_Co() {
             while (true) {
                 yield return new WaitUntil(()=>intendedInsult);
-                Debug.Log("You: " + intendedInsult.Insult);
-                yield return new WaitForSeconds(0.1f);
-                Debug.Log("Enemy: ...");
-                yield return new WaitForSeconds(1f);
-                Debug.Log("Enemy: " + intendedInsult.Response);
-                Debug.Log("Start Minigame");
-                // start minigame and wait for finish
+                yield return playerTextBox.DisplayText_Co("You: " + intendedInsult.Insult, 1f);
+                yield return enemyTextBox.DisplayText_Co("Enemy: ...", 0.5f);
+                yield return enemyTextBox.DisplayText_Co("Enemy: " + intendedInsult.Response, 1.5f);
+                
                 var miniGamePrefab = currentEnemy.Value.miniGamePrefab;
                 var miniGame = Instantiate(miniGamePrefab, transform.position + miniGameSpawnOffset, 
                     quaternion.identity);
                 miniGame.TryGetComponent(out currentMiniGame);
                 if (currentMiniGame != null) {
+                    currentMiniGame.Setup(effi);
                     yield return currentMiniGame.Execute();
                 }
                 intendedInsult = null;
+                intendedInsultType = InsultType.None;
                 currentMiniGame = null;
+                if (playerCurrentHealth.Value <= 0) {
+                    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+                }
                 Debug.Log("Turn ended");
             }
         }
@@ -54,6 +68,7 @@ namespace Dummerhuan.Combat {
             var insults = currentEnemy.Value.possibleInsults[type];
             int rand = Random.Range(0, insults.Length);
             intendedInsult = insults[rand];
+            intendedInsultType = type;
         }
 
         private IEnumerator TestMiniGame_Co() {
