@@ -3,14 +3,18 @@ using System.Collections;
 using Dummerhuan.MiniGames;
 using Dummerhuan.References;
 using MyBox;
+using ScriptableObjectArchitecture;
 using Unity.Mathematics;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using Random = UnityEngine.Random;
 
 namespace Dummerhuan.Combat {
     public class CombatManager : Singleton<CombatManager> {
         [SerializeField] private EnemySOReference currentEnemy;
         [SerializeField] private Vector3 miniGameSpawnOffset;
+        [SerializeField] private FloatReference playerMaxHealth;
+        [SerializeField] private FloatReference playerCurrentHealth;
 
         private InsultSO intendedInsult;
         private Coroutine combatCoroutine;
@@ -22,6 +26,8 @@ namespace Dummerhuan.Combat {
             }
 
             combatCoroutine = StartCoroutine(CombatLoop_Co());
+
+            playerCurrentHealth.Value = playerMaxHealth.Value;
         }
 
         private IEnumerator CombatLoop_Co() {
@@ -43,6 +49,9 @@ namespace Dummerhuan.Combat {
                 }
                 intendedInsult = null;
                 currentMiniGame = null;
+                if (playerCurrentHealth.Value <= 0) {
+                    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+                }
                 Debug.Log("Turn ended");
             }
         }
