@@ -16,7 +16,9 @@ namespace Dummerhuan {
             var insults = currentEnemy.Value.possibleInsults[type];
             int rand = Random.Range(0, insults.Length);
             string insultText = insults[rand].Insult;
-            Debug.Log(insultText);
+            string responseText = insults[rand].Response;
+            Debug.Log("You: " + insultText);
+            Debug.Log("Enemy: " + responseText);
         }
     }
 }
