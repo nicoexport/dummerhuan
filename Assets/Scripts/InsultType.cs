@@ -1,4 +1,6 @@
 public enum InsultType {
-    BodyShaming,
-    MomJoke
+    InsultType1,
+    InsultType2,
+    InsultType3,
+    InsultType4
 }
