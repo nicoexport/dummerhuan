@@ -1,19 +1,20 @@
+﻿using System;
 using ScriptableObjectArchitecture;
+using TMPro;
 using UnityEngine;
 
 namespace Dummerhuan {
-    public class TestPlayer : MonoBehaviour {
+    public class UIHealth : MonoBehaviour {
         [SerializeField] private IntReference maxHealth;
         [SerializeField] private IntReference currentHealth;
+        [SerializeField] private TextMeshProUGUI healthText;
 
-        protected void Start() {
-            currentHealth.Value = maxHealth.Value;
+        protected void OnEnable() {
+            OnHealthChanged();
         }
 
         public void OnHealthChanged() {
-            if (currentHealth.Value <= 0) {
-                Destroy(gameObject);
-            }
+            healthText.text = currentHealth.Value.ToString();
         }
     }
 }
