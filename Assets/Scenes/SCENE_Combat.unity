@@ -1223,7 +1223,7 @@ MonoBehaviour:
     _useConstant: 0
     _constantValue: {fileID: 0}
     _variable: {fileID: 11400000, guid: 99dd2fe4b1ac0794ab8adc105972ca36, type: 2}
-  miniGameSpawnOffset: {x: 0, y: 3.01, z: 0}
+  miniGameSpawnOffset: {x: -1.4, y: 2.7, z: 0}
   playerMaxHealth:
     _useConstant: 0
     _constantValue: 0
@@ -1234,6 +1234,7 @@ MonoBehaviour:
     _variable: {fileID: 11400000, guid: b753fa751c0aaea4fb37c5be99559d9d, type: 2}
   enemyTextBox: {fileID: 369202672}
   playerTextBox: {fileID: 1635072924}
+  effi: 1
 --- !u!1 &959133064
 GameObject:
   m_ObjectHideFlags: 0

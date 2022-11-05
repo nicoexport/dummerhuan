@@ -4,6 +4,7 @@ namespace Dummerhuan.Combat
         InsultType1,
         InsultType2,
         InsultType3,
-        InsultType4
+        InsultType4,
+        None
     }
 }

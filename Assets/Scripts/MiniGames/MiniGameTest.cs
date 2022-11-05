@@ -1,4 +1,5 @@
 using System.Collections;
+using Dummerhuan.Combat;
 using ScriptableObjectArchitecture;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -16,7 +17,11 @@ namespace Dummerhuan.MiniGames {
                 finished = true;
             }
         }
-        
+
+        public void Setup(Effectiveness effectiveness) {
+            
+        }
+
         public IEnumerator Execute() {
             yield return new WaitUntil(() => finished);
             playerCurrentHealth.Value -= damage;
