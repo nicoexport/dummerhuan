@@ -18,6 +18,7 @@ namespace Dummerhuan.Combat {
         [SerializeField] private TextBoxUI enemyTextBox;
         [SerializeField] private TextBoxUI playerTextBox;
         [SerializeField] private PortraitUI enemyPortrait;
+        [SerializeField] private GameObject insultButtonParent;
         
         private InsultSO intendedInsult;
         private Coroutine combatCoroutine;
@@ -38,6 +39,8 @@ namespace Dummerhuan.Combat {
             while (true) {
                 yield return new WaitUntil(()=>intendedInsult);
                 
+                insultButtonParent.SetActive(false);
+                
                 var effect = currentEnemy.Value.effectivenesses[intendedInsultType];
                 
                 yield return playerTextBox.DisplayText_Co("You: " + intendedInsult.Insult, 1f);
@@ -46,7 +49,6 @@ namespace Dummerhuan.Combat {
                 enemyPortrait.SetSpriteTempForSeconds(reactionSprite, 1.5f);
                 yield return enemyTextBox.DisplayText_Co("Enemy: " + intendedInsult.Response, 1.5f);
 
-                
                 var miniGamePrefab = currentEnemy.Value.miniGamePrefab;
                 var miniGame = Instantiate(miniGamePrefab, transform.position + miniGameSpawnOffset, 
                     quaternion.identity);
@@ -55,13 +57,16 @@ namespace Dummerhuan.Combat {
                     currentMiniGame.Setup(effect);
                     yield return currentMiniGame.Execute();
                 }
+                
                 intendedInsult = null;
                 intendedInsultType = InsultType.None;
                 currentMiniGame = null;
+                
                 if (playerCurrentHealth.Value <= 0) {
                     SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
                 }
                 Debug.Log("Turn ended");
+                insultButtonParent.SetActive(true);
             }
         }
 

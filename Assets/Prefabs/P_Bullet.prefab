@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2560222804611768507}
   - component: {fileID: 603408348201865330}
   m_Layer: 0
-  m_Name: P_Minigame_Bullet
+  m_Name: P_Bullet
   m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
