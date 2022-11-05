@@ -18,10 +18,14 @@ namespace Dummerhuan.Combat {
         [SerializeField] private TextBoxUI enemyTextBox;
         [SerializeField] private TextBoxUI playerTextBox;
 
+        [SerializeField] private Effectiveness effi;
+
         private InsultSO intendedInsult;
         private Coroutine combatCoroutine;
         private IMiniGame currentMiniGame;
+        private InsultType intendedInsultType;
         
+
         protected void Awake() {
             if (combatCoroutine != null) {
                 StopCoroutine(combatCoroutine);
@@ -44,9 +48,11 @@ namespace Dummerhuan.Combat {
                     quaternion.identity);
                 miniGame.TryGetComponent(out currentMiniGame);
                 if (currentMiniGame != null) {
+                    currentMiniGame.Setup(effi);
                     yield return currentMiniGame.Execute();
                 }
                 intendedInsult = null;
+                intendedInsultType = InsultType.None;
                 currentMiniGame = null;
                 if (playerCurrentHealth.Value <= 0) {
                     SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
@@ -62,6 +68,7 @@ namespace Dummerhuan.Combat {
             var insults = currentEnemy.Value.possibleInsults[type];
             int rand = Random.Range(0, insults.Length);
             intendedInsult = insults[rand];
+            intendedInsultType = type;
         }
 
         private IEnumerator TestMiniGame_Co() {
