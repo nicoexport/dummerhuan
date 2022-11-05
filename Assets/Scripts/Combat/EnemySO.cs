@@ -7,6 +7,8 @@ namespace Dummerhuan.Combat {
         public Sprite portrait;
         public SerializableKeyValuePairs<InsultType, InsultSO[]> possibleInsults = 
             new();
-        
+
+        public GameObject miniGamePrefab;
+
     }
 }
