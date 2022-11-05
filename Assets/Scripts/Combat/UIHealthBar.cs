@@ -1,10 +1,9 @@
-﻿using System;
-using ScriptableObjectArchitecture;
+﻿using ScriptableObjectArchitecture;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Dummerhuan {
+namespace Dummerhuan.Combat {
     public class UIHealthBar : MonoBehaviour {
         [SerializeField] private FloatReference maxHealth;
         [SerializeField] private FloatReference currentHealth;

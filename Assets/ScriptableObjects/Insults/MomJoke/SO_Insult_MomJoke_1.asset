@@ -9,14 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9377ffeb64ba30478a995a8ffc78ae8, type: 3}
-  m_Name: VAR_float_PlayerCurrentHealth
+  m_Script: {fileID: 11500000, guid: 014e5a29f183412ab2f78c73e26e264b, type: 3}
+  m_Name: SO_Insult_MomJoke_1
   m_EditorClassIdentifier: 
-  DeveloperDescription:
-    _value: .
-  _value: 0
-  _readOnly: 0
-  _raiseWarning: 1
-  _isClamped: 1
-  _minClampedValue: 0
-  _maxClampedValue: 100
+  Insult: YOUR MOMS A HOE!
+  Response: NO YOUR MOMS A HOE!
