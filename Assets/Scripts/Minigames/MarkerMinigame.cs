@@ -1,68 +1,50 @@
 using System.Collections;
-using System.Collections.Generic;
+using Dummerhuan.MiniGames;
+using ScriptableObjectArchitecture;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-namespace Dummerhuan
-{
-    public class MarkerMinigame : MonoBehaviour
-    {
-        public Animator marker;
-        public Transform markerPos;
-
+namespace Dummerhuan {
+    public class MarkerMinigame : MonoBehaviour, IMiniGame {
+        [Header("Minigame Values")]
+        [Range(-1, 1)]
+        public int effectivness;
         [Range(0f, 1f)]
         public float goodPartValue;
-
         [Range(0f, 1f)]
         public float perfectPartValue;
 
+        [Header("Minigame Results")]
+        [SerializeField] private float[] damageValues;
+
+        [Header("Reference")]
+        public Animator marker;
+        public Transform markerPos;
         public Transform goodPart;
         public Transform perfectPart;
 
-        private bool isStopped;
+        [SerializeField] private FloatReference playerCurrentHealth;
+        [SerializeField] private bool finished = false;
 
-        float goodPartEnd;
-        float perfectPartEnd;
-        float checkX;
+        protected void Start() {
 
-        // Start is called before the first frame update
-        void Start()
-        {
-            goodPartEnd = goodPart.localScale.x / 2;
-            perfectPartEnd = perfectPart.localScale.x / 2;
         }
 
-        // Update is called once per frame
-        void Update()
-        {
+        protected void Update() {
             AdjustBars();
 
-            checkX = markerPos.localScale.x;
-
             var keyboard = Keyboard.current;
-            if (keyboard.spaceKey.wasPressedThisFrame)
-            {
+            if (keyboard.spaceKey.wasPressedThisFrame) {
                 Evaluate();
             }
         }
 
-        void Evaluate()
-        {
-            isStopped = !isStopped;
-
-            if (!isStopped) 
-            {
-                marker.StopPlayback();
-                CheckMarkerPos();
-            }
-            else 
-            {
-                marker.StartPlayback();
-            }
+        protected void Evaluate() {
+            marker.StartPlayback();
+            CheckMarkerPos();
         }
 
-        void AdjustBars() 
-        {
+        protected void AdjustBars() {
             var gScale = goodPart.localScale;
             gScale.x = goodPartValue;
 
@@ -74,24 +56,25 @@ namespace Dummerhuan
             perfectPart.localScale = pScale;
         }
 
-        void CheckMarkerPos() 
-        {
+        protected void CheckMarkerPos() {
+            float[] breakPoints = new float[3];
+            breakPoints[0] = perfectPart.localScale.x / 2;
+            breakPoints[1] = goodPart.localScale.x / 2;
+            breakPoints[2] = 0.5f;
+            float checkX = Mathf.Abs(markerPos.localPosition.x);
 
-            if (checkX >= -perfectPartEnd && checkX <= perfectPartEnd)
-            {
-                Debug.Log("PERFECT!");
-                return;
-            } 
-            else if (checkX >= -goodPartEnd && checkX <= goodPartEnd)
-            {
-                Debug.Log("GOOD!");
-                return;
+            for (int i = 0; i < breakPoints.Length; i++) {
+                if (checkX < Mathf.Abs(breakPoints[i])) {
+                    playerCurrentHealth.Value -= damageValues[i];
+                }
             }
-            else 
-            {
-                Debug.Log("BAD!");
-                return;
-            }
+            finished = true;
         }
+        public IEnumerator Execute() {
+            yield return new WaitUntil(() => finished);
+            End();
+        }
+
+        public void End() => Destroy(gameObject);
     }
 }
