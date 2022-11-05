@@ -591,7 +591,7 @@ MonoBehaviour:
     _variable: {fileID: 11400000, guid: b753fa751c0aaea4fb37c5be99559d9d, type: 2}
   enemyTextBox: {fileID: 1672979005}
   playerTextBox: {fileID: 1635072924}
-  effi: 1
+  enemyPortrait: {fileID: 1435519769}
 --- !u!1 &959133064
 GameObject:
   m_ObjectHideFlags: 0
@@ -815,6 +815,7 @@ GameObject:
   - component: {fileID: 1435519766}
   - component: {fileID: 1435519768}
   - component: {fileID: 1435519767}
+  - component: {fileID: 1435519769}
   m_Layer: 5
   m_Name: EnemyPortrait
   m_TagString: Untagged
@@ -880,6 +881,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1435519765}
   m_CullTransparentMesh: 1
+--- !u!114 &1435519769
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1435519765}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1592b8e5d49f424599f14be102fb1c7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  image: {fileID: 1435519767}
 --- !u!224 &1635072923 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6436778258215279475, guid: 3b783122ccd2c4140801ef68e4bbacf1, type: 3}
