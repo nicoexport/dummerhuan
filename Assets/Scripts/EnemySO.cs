@@ -7,5 +7,6 @@ namespace Dummerhuan {
         public Sprite portrait;
         public SerializableKeyValuePairs<InsultType, InsultSO[]> possibleInsults = 
             new();
+        
     }
 }

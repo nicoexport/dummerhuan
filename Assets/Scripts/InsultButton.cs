@@ -1,7 +1,5 @@
-using System;
 using TMPro;
 using UnityEngine;
-using UnityEngine.Rendering.UI;
 
 namespace Dummerhuan {
     public class InsultButton : MonoBehaviour {
@@ -20,7 +18,7 @@ namespace Dummerhuan {
         }
 
         public void OnClicked() {
-            Debug.Log(insultType.ToString());
+            CombatManager.Instance.TestInsultButton(insultType);
         }
     }
 }
