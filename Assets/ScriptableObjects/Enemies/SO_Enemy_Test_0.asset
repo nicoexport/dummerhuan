@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f07a9d235d2d4672ac2ee869f2eb48f9, type: 3}
   m_Name: SO_Enemy_Test_0
   m_EditorClassIdentifier: 
-  portrait: {fileID: 21300000, guid: 3c51118c1a8b6884cb48de9df27ed7e5, type: 3}
+  portrait: {fileID: 21300000, guid: 062d185fc280f9444b0f8d0c5c07a464, type: 3}
   possibleInsults:
     items:
     - key: 0
