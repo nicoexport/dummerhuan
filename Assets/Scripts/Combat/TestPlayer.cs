@@ -1,9 +1,8 @@
 using ScriptableObjectArchitecture;
-using ScriptableObjectArchitecture.Examples;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-namespace Dummerhuan {
+namespace Dummerhuan.Combat {
     public class TestPlayer : MonoBehaviour {
         [SerializeField] private FloatReference maxHealth;
         [SerializeField] private FloatReference currentHealth;

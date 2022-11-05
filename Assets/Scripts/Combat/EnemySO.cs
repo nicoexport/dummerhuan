@@ -1,7 +1,7 @@
 using Slothsoft.UnityExtensions;
 using UnityEngine;
 
-namespace Dummerhuan {
+namespace Dummerhuan.Combat {
     [CreateAssetMenu(menuName = "ScriptableObjects/Enemy", order = 0)]
     public class EnemySO : ScriptableObject {
         public Sprite portrait;

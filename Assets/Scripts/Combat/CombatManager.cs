@@ -4,7 +4,7 @@ using ScriptableObjectArchitecture;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Dummerhuan {
+namespace Dummerhuan.Combat {
     public class CombatManager : Singleton<CombatManager> {
         [SerializeField] private EnemySOReference currentEnemy;
 

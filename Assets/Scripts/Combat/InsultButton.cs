@@ -1,7 +1,7 @@
 using TMPro;
 using UnityEngine;
 
-namespace Dummerhuan {
+namespace Dummerhuan.Combat {
     public class InsultButton : MonoBehaviour {
         [SerializeField] private TextMeshProUGUI textMesh;
         [SerializeField] private InsultType insultType;

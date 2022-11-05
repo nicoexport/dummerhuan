@@ -1,10 +1,8 @@
-using System;
 using Dummerhuan.References;
-using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Dummerhuan {
+namespace Dummerhuan.Combat {
     public class CombatUI : MonoBehaviour {
         [SerializeField] private EnemySOReference currentEnemy;
         [SerializeField] private Image enemyPortrait;
