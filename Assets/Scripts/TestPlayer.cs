@@ -1,13 +1,27 @@
 using ScriptableObjectArchitecture;
+using ScriptableObjectArchitecture.Examples;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 namespace Dummerhuan {
     public class TestPlayer : MonoBehaviour {
-        [SerializeField] private IntReference maxHealth;
-        [SerializeField] private IntReference currentHealth;
+        [SerializeField] private FloatReference maxHealth;
+        [SerializeField] private FloatReference currentHealth;
 
         protected void Start() {
             currentHealth.Value = maxHealth.Value;
+        }
+
+        protected void Update() {
+            var keyboard = Keyboard.current;
+
+            if (keyboard.aKey.wasPressedThisFrame) {
+                ChangeHealth(-10f);
+            }
+            
+            if (keyboard.dKey.wasPressedThisFrame) {
+                ChangeHealth(10f);
+            }
         }
 
         public void OnHealthChanged() {
@@ -15,5 +29,11 @@ namespace Dummerhuan {
                 Destroy(gameObject);
             }
         }
+        
+        private void ChangeHealth(float amount) {
+            currentHealth.Value += amount;
+        }
+
+        
     }
 }
