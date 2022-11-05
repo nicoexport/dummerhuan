@@ -15,6 +15,8 @@ namespace Dummerhuan.Combat {
         [SerializeField] private Vector3 miniGameSpawnOffset;
         [SerializeField] private FloatReference playerMaxHealth;
         [SerializeField] private FloatReference playerCurrentHealth;
+        [SerializeField] private TextBoxUI enemyTextBox;
+        [SerializeField] private TextBoxUI playerTextBox;
 
         private InsultSO intendedInsult;
         private Coroutine combatCoroutine;
@@ -33,13 +35,10 @@ namespace Dummerhuan.Combat {
         private IEnumerator CombatLoop_Co() {
             while (true) {
                 yield return new WaitUntil(()=>intendedInsult);
-                Debug.Log("You: " + intendedInsult.Insult);
-                yield return new WaitForSeconds(0.1f);
-                Debug.Log("Enemy: ...");
-                yield return new WaitForSeconds(1f);
-                Debug.Log("Enemy: " + intendedInsult.Response);
-                Debug.Log("Start Minigame");
-                // start minigame and wait for finish
+                yield return playerTextBox.DisplayText_Co("You: " + intendedInsult.Insult, 1f);
+                yield return enemyTextBox.DisplayText_Co("Enemy: ...", 0.5f);
+                yield return enemyTextBox.DisplayText_Co("Enemy: " + intendedInsult.Response, 1.5f);
+                
                 var miniGamePrefab = currentEnemy.Value.miniGamePrefab;
                 var miniGame = Instantiate(miniGamePrefab, transform.position + miniGameSpawnOffset, 
                     quaternion.identity);
