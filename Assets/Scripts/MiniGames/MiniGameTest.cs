@@ -19,7 +19,7 @@ namespace Dummerhuan.MiniGames {
         }
 
         public void Setup(Effectiveness effectiveness) {
-            
+
         }
 
         public IEnumerator Execute() {

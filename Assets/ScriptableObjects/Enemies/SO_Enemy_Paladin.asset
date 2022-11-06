@@ -40,9 +40,12 @@ MonoBehaviour:
       value: 0
     - key: 3
       value: 2
-  miniGamePrefab: {fileID: 3983903471434563919, guid: d0402185cbff3d042a96f8b978343af6, type: 3}
+  miniGamePrefabs:
+  - {fileID: 3983903471434563919, guid: d0402185cbff3d042a96f8b978343af6, type: 3}
+  - {fileID: 2901593520833307090, guid: 92d57d2821f43d049b7d8522824e03cc, type: 3}
   idleSprite: {fileID: 21300000, guid: 062d185fc280f9444b0f8d0c5c07a464, type: 3}
   reactionSprites:
   - {fileID: 21300000, guid: 0e37c4eb68939444998cb415a7a6b8ab, type: 3}
   - {fileID: 21300000, guid: 65cc75cf42823e244ac3c3fe4a7eb815, type: 3}
   - {fileID: 21300000, guid: 5d2bcfe81c368bc47b33dc497cae9c7c, type: 3}
+  speakerConfig: {fileID: 11400000, guid: f8fc368881af0b742b9caff6fed1f8f7, type: 2}

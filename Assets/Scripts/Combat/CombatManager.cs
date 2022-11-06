@@ -18,6 +18,7 @@ namespace Dummerhuan.Combat {
         [SerializeField] private TextBoxUI enemyTextBox;
         [SerializeField] private TextBoxUI playerTextBox;
         [SerializeField] private PortraitUI enemyPortrait;
+        [SerializeField] private GameObject insultButtonParent;
         
         private InsultSO intendedInsult;
         private Coroutine combatCoroutine;
@@ -38,16 +39,19 @@ namespace Dummerhuan.Combat {
             while (true) {
                 yield return new WaitUntil(()=>intendedInsult);
                 
-                var effect = currentEnemy.Value.effectivenesses[intendedInsultType];
+                insultButtonParent.SetActive(false);
                 
-                yield return playerTextBox.DisplayText_Co("You: " + intendedInsult.Insult, 1f);
-                yield return enemyTextBox.DisplayText_Co("Enemy: ...", 1f);
+                var effect = currentEnemy.Value.effectivenesses[intendedInsultType];
+                var response = intendedInsult.GetResponse();
+                
+                yield return playerTextBox.DisplayText_Co("You", intendedInsult.Insult, 0.07f);
+                yield return enemyTextBox.DisplayText_Co("Enemy", "...", 0.3f);
                 var reactionSprite = currentEnemy.Value.reactionSprites[(int)effect];
                 enemyPortrait.SetSpriteTempForSeconds(reactionSprite, 1.5f);
-                yield return enemyTextBox.DisplayText_Co("Enemy: " + intendedInsult.Response, 1.5f);
+                yield return enemyTextBox.DisplayText_Co("Enemy", response, 0.07f);
 
+                var miniGamePrefab = currentEnemy.Value.GetMiniGamePrefab();
                 
-                var miniGamePrefab = currentEnemy.Value.miniGamePrefab;
                 var miniGame = Instantiate(miniGamePrefab, transform.position + miniGameSpawnOffset, 
                     quaternion.identity);
                 miniGame.TryGetComponent(out currentMiniGame);
@@ -55,13 +59,19 @@ namespace Dummerhuan.Combat {
                     currentMiniGame.Setup(effect);
                     yield return currentMiniGame.Execute();
                 }
+
+                enemyPortrait.SetSpriteTempForSeconds(reactionSprite, 1f);
+                yield return new WaitForSeconds(1f);
+                
                 intendedInsult = null;
                 intendedInsultType = InsultType.None;
                 currentMiniGame = null;
+                
                 if (playerCurrentHealth.Value <= 0) {
                     SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
                 }
                 Debug.Log("Turn ended");
+                insultButtonParent.SetActive(true);
             }
         }
 

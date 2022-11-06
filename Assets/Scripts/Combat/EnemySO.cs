@@ -1,3 +1,4 @@
+using Dummerhuan.Audio;
 using MyBox;
 using Slothsoft.UnityExtensions;
 using UnityEngine;
@@ -11,11 +12,19 @@ namespace Dummerhuan.Combat {
         [Separator]
         public SerializableKeyValuePairs<InsultType, Effectiveness> effectivenesses;
         [Separator]
-        public GameObject miniGamePrefab;
+        public GameObject[] miniGamePrefabs;
 
         [Separator] 
         public Sprite idleSprite;
         public Sprite[] reactionSprites;
+
+        [Separator] 
+        public AudioConfigSo speakerConfig;
+
+        public GameObject GetMiniGamePrefab() {
+            int rand = Random.Range(0, miniGamePrefabs.Length);
+            return miniGamePrefabs[rand];
+        }
 
     }
 }
