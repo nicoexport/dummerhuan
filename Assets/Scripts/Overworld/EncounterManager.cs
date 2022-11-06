@@ -5,6 +5,7 @@ using Dummerhuan.References;
 using MyBox;
 using ScriptableObjectArchitecture;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
 namespace Dummerhuan.Overworld {
@@ -37,20 +38,32 @@ namespace Dummerhuan.Overworld {
             Setup();
         }
 
+        protected void Update() {
+            var keyboard = Keyboard.current;
+        }
+
         private void Setup() {
             int corpseCount = 0;
             if (paladin.defeated.Value == false) {
                 currentEnemy.Value = paladin;
+                aasimar.defeated.Value = false;
+                elf.defeated.Value = false;
             } else if(aasimar.defeated.Value == false) {
                 currentEnemy.Value = aasimar;
+                elf.defeated.Value = false;
+                paladin.defeated.Value = true;
                 corpseCount = 1;
             } else if (elf.defeated.Value == false) {
                 currentEnemy.Value = elf;
+                aasimar.defeated.Value = true;
+                paladin.defeated.Value = true;
                 corpseCount = 2;
             } else {
                 ResetGameState();
+                return;
             }
-
+            
+            Debug.LogError( (paladin.defeated.Value.ToString() + aasimar.defeated.Value.ToString() + elf.defeated.Value.ToString()));
             SetupScene(currentEnemy.Value, corpseCount);
         }
 

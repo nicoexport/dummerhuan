@@ -6,6 +6,7 @@ using MyBox;
 using ScriptableObjectArchitecture;
 using Unity.Mathematics;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 using Object = UnityEngine.Object;
 using Random = UnityEngine.Random;
@@ -36,6 +37,13 @@ namespace Dummerhuan.Combat {
             combatCoroutine = StartCoroutine(CombatLoop_Co());
 
             playerCurrentHealth.Value = playerMaxHealth.Value;
+        }
+
+        protected void Update() {
+            var keyboard = Keyboard.current;
+            if (keyboard.lKey.wasPressedThisFrame) {
+                playerCurrentHealth.Value = 0f;
+            }
         }
 
         private IEnumerator CombatLoop_Co() {
