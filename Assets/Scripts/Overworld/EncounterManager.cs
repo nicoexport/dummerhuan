@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using Dummerhuan.Combat;
 using Dummerhuan.References;
@@ -58,9 +59,9 @@ namespace Dummerhuan.Overworld {
         }
         
         private IEnumerator DisplayDialog_Co() {
-            foreach (var linePair in currentDialog.dialogLines) {
-                var line = linePair.Key;
-                var speaker = linePair.Value;
+            foreach (var linePair in currentDialog.allDialogLines) {
+                var line = linePair.message;
+                var speaker = linePair.speaker;
                 bool flip = false;
 
                 if (lastSpeaker == Speaker.None) {
@@ -76,4 +77,10 @@ namespace Dummerhuan.Overworld {
             SceneManager.LoadScene(combatSceneIndex);
         }
     }
+}
+
+[Serializable]
+public struct DialogLine {
+    public string message;
+    public Speaker speaker;
 }
