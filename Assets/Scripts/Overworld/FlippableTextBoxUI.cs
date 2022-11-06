@@ -1,23 +1,16 @@
-using System;
 using System.Collections;
 using System.Text;
-using TMPro;
+using Dummerhuan.Combat;
 using UnityEngine;
-using UnityEngine.Events;
 
-namespace Dummerhuan.Combat {
-    public class TextBoxUI : MonoBehaviour {
-        [SerializeField] protected RectTransform panel;
-        [SerializeField] protected TextMeshProUGUI textMesh;
+namespace Dummerhuan.Overworld {
+    public class FlippableTextBoxUI : TextBoxUI {
 
-        public UnityEvent OnDisplayCharacter;
-
-        protected void Awake() {
-            panel.gameObject.SetActive(false);
-        }
-
-        public IEnumerator DisplayText_Co(string message, float timeInSecondsPerChar) {
+        public IEnumerator DisplayText_Co(string message, bool flip, float timeInSecondsPerChar) {
             panel.gameObject.SetActive(true);
+            if (flip) {
+                Flip();
+            }
             textMesh.text = "";
             var builder = new StringBuilder();
 
@@ -33,6 +26,15 @@ namespace Dummerhuan.Combat {
 
             yield return new WaitForSeconds(1f);
             panel.gameObject.SetActive(false);
+        }
+
+        private void Flip() {
+            var panelScale = panel.localScale;
+            panelScale.x = - panelScale.x;
+            panel.localScale = panelScale;
+            var textScale = textMesh.rectTransform.localScale;
+            textScale.x = -textScale.x;
+            textMesh.rectTransform.localScale = textScale;
         }
     }
 }
