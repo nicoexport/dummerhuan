@@ -27,6 +27,7 @@ namespace Dummerhuan.Combat {
         [Header("Overworld")]
         public Sprite chibiSprite;
         public Sprite playerChibiSprite;
+        public Sprite chibiHeadSprite;
 
         [Separator] 
         public DialogSO overWorldDialog;

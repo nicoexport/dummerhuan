@@ -58,5 +58,6 @@ MonoBehaviour:
   - {fileID: 21300000, guid: d51d6d1d2f6f0774bbb9c69b08091dab, type: 3}
   chibiSprite: {fileID: 21300000, guid: 1211411920944a5479a2bab31b919d68, type: 3}
   playerChibiSprite: {fileID: 21300000, guid: c951f7ac0195ca448bc0564b0a08357f, type: 3}
+  chibiHeadSprite: {fileID: 21300000, guid: 8725feafdf92a4e4d902e98179f91d10, type: 3}
   overWorldDialog: {fileID: 11400000, guid: d89495c542198c5489e92fd978a96e8d, type: 2}
   speakerConfig: {fileID: 11400000, guid: f6fbcc7a59cf731489b84d4f312c7efa, type: 2}

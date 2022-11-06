@@ -12,15 +12,14 @@ namespace Dummerhuan {
 
         private int damageTaken;
         private int damageBreakpoint;
-
-
-
+        
         [SerializeField] private Animator[] moles;
 
         public float enemyMoleChance = 0.7f;
 
         public int healValue = 2;
         public int damageValue = 3;
+        private Camera cam;
 
         [SerializeField] private FloatReference playerCurrentHealth;
         [SerializeField] private float[] durationsInSeconds;
@@ -29,26 +28,22 @@ namespace Dummerhuan {
         public float moleRate = 1f;
         private float nextMole;
 
-        // Start is called before the first frame update
-        void Start() {
-
+        protected void Awake() {
+            cam = Camera.main;
         }
 
-        // Update is called once per frame
         void Update() {
-            /*
             var mouse = Mouse.current;
-            var mousePos = mouse.position.ReadValue();
+            Vector3 mousePos = mouse.position.ReadValue();
 
-            Ray ray = Camera.main.ScreenPointToRay(mousePos);
-            RaycastHit hit;
 
-            if (Physics.Raycast(ray, out hit)) {
-                if (mouse.leftButton.wasPressedThisFrame) {
+            var hit = Physics2D.Raycast(mousePos, mousePos - cam.ScreenToWorldPoint(mousePos) );
+            if (mouse.leftButton.wasPressedThisFrame) {
+                if (hit) {
                     Debug.Log(hit.collider.gameObject);
                 }
             }
-            */
+            
 
             if (Time.time > nextMole) {
                 Mole();

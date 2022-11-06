@@ -1,12 +1,16 @@
 using System.Collections;
 using Dummerhuan.Combat;
 using Dummerhuan.MiniGames;
+using Dummerhuan.References;
 using ScriptableObjectArchitecture;
 using UnityEngine;
 
 namespace Dummerhuan.BulletHell {
     public class BulletHellMinigame : MonoBehaviour, IMiniGame {
         [SerializeField] private float[] durationsInSeconds;
+        [SerializeField] private EnemySOReference currentEnemy;
+        [SerializeField] private SpriteRenderer spawnRenderer;
+        
         public GameObjectCollection bulletCollection;
         public BoxCollider2D col;
         private bool finished;
@@ -16,6 +20,7 @@ namespace Dummerhuan.BulletHell {
 
         private void OnEnable() {
             bulletCollection.Clear();
+            spawnRenderer.sprite = currentEnemy.Value.chibiHeadSprite;
         }
 
         private void OnDisable() {
