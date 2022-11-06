@@ -12,5 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 014e5a29f183412ab2f78c73e26e264b, type: 3}
   m_Name: SO_Insult_Family_Elf
   m_EditorClassIdentifier: 
-  Insult: 
-  Responses: []
+  Insult: You should be glad, I cleansed the worth of a whole lot of stupidity now
+    that your husband is no more.
+  Responses:
+  - Take that back!
+  - You have no right to talk about him like that!
+  - You insensitive monster!

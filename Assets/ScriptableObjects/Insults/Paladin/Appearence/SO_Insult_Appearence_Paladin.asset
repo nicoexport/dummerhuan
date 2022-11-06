@@ -12,5 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 014e5a29f183412ab2f78c73e26e264b, type: 3}
   m_Name: SO_Insult_Appearence_Paladin
   m_EditorClassIdentifier: 
-  Insult: 
-  Responses: []
+  Insult: "I finally figured out what your long, golden hair reminds me of\u2026
+    Straw!"
+  Responses:
+  - At least, it is growing out of my head and not inside.
+  - "I rather have long straw-hair than your stupid\u2026 stupid-hair."
+  - Get out of my hair!

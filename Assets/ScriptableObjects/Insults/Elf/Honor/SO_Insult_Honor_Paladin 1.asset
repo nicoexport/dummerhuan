@@ -10,10 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 014e5a29f183412ab2f78c73e26e264b, type: 3}
-  m_Name: SO_Insult_Family_Paladin
+  m_Name: SO_Insult_Honor_Paladin 1
   m_EditorClassIdentifier: 
-  Insult: Your mother is a cheap wench!
+  Insult: Word traveled far, that the real life beauty and the beast live here. So,
+    tell me, beast, where is the beauty?
   Responses:
-  - "No, she\u2018s not cheap! She\u2018s really expensive."
-  - N-no! But your mom is!
-  - My mother is a human, not a tool!
+  - Of course, my reputation is about how pretty my husband is.
+  - Beauty died, because of your awful hand.
+  - "My husband was a beauty in the streets, but with him\u2026 I was a beast in
+    the sheets."

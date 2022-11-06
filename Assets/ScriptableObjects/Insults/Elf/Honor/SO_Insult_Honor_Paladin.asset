@@ -12,5 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 014e5a29f183412ab2f78c73e26e264b, type: 3}
   m_Name: SO_Insult_Honor_Paladin
   m_EditorClassIdentifier: 
-  Insult: 
-  Responses: []
+  Insult: "People weren\u2019t wrong. Your husband really was way too pretty for
+    you."
+  Responses:
+  - Absolutely, he was gorgeous.
+  - "I still don\u2019t understand why he chose me."
+  - He also had a good heart.

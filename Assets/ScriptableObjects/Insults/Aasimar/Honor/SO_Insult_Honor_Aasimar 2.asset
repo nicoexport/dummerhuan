@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 014e5a29f183412ab2f78c73e26e264b, type: 3}
+  m_Name: SO_Insult_Honor_Aasimar 2
+  m_EditorClassIdentifier: 
+  Insult: "I never thought one could be as bad as your reputation, but now that I\u2019ve
+    met you, I must admit\u2026 They are right."
+  Responses:
+  - "You should look up the word \u2018bad\u2019 in the dictionary. I think you\u2019re
+    using it wrongly."
+  - "You should\u2019ve stopped your sentence after \u2018thought\u2019. You never
+    thought. Full stop."
+  - Are they really truthful or simply jealous?

@@ -10,10 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 014e5a29f183412ab2f78c73e26e264b, type: 3}
-  m_Name: SO_Insult_Family_Paladin
+  m_Name: SO_Insult_Int_Elf 2
   m_EditorClassIdentifier: 
-  Insult: Your mother is a cheap wench!
+  Insult: "After meeting your husband, I really thought, it can\u2019t get dumber
+    yet here you are."
   Responses:
-  - "No, she\u2018s not cheap! She\u2018s really expensive."
-  - N-no! But your mom is!
-  - My mother is a human, not a tool!
+  - Excuse you?
+  - "You didn\u2019t just meet my husband. You killed him!"
+  - And the next thing you'll meet is your end. You monster!
