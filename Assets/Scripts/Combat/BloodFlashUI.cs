@@ -1,23 +1,35 @@
+using System;
 using System.Collections;
 using ScriptableObjectArchitecture;
 using UnityEngine;
 
 namespace Dummerhuan.Combat {
     public class BloodFlashUI : MonoBehaviour {
+        [SerializeField] private GameObject bloodFlashImage;
+        [SerializeField] private FloatReference playerMaxHealth;
         [SerializeField] private FloatReference playerCurrentHealth;
-        [SerializeField] private GameObject bloodFlash;
         private bool flashing;
 
+        protected void OnEnable() {
+           bloodFlashImage.SetActive(false); 
+        }
+        
         public void OnHealthChanged() {
-            if (flashing)
+            if (Math.Abs(playerCurrentHealth.Value - playerMaxHealth.Value) < 0.1f) {
                 return;
+            }
+            if (flashing) {
+                return;
+            }
             flashing = true;
+            StartCoroutine(Flash_Co());
         }
 
         private IEnumerator Flash_Co() {
-            bloodFlash.SetActive(true);
+            bloodFlashImage.SetActive(true);
             yield return new WaitForSeconds(0.1f);
-            bloodFlash.SetActive(false);
+            bloodFlashImage.SetActive(false);
+            flashing = false;
         }
     }
 }
