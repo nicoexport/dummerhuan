@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71381fc8166a4978a6d7a99d90d23558, type: 3}
+  m_Name: SO_Dialog_Elf
+  m_EditorClassIdentifier: 
+  dialogLines:
+    items:
+    - key: What did you do to my husband?!
+      value: 1
+    - key: Have a look for yourself. I think it is pretty obvious.
+      value: 0
+    - key: "Don\u2019t you feel any remorse?"
+      value: 1
+    - key: "Interesting question. Let me think\u2026 No."
+      value: 0
+    - key: "Then I\u2019ll make you feel it."
+      value: 1
