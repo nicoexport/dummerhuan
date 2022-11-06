@@ -20,34 +20,34 @@ MonoBehaviour:
     items:
     - key: 0
       value:
-      - {fileID: 11400000, guid: 4125223156829d24c8183d3927bf183b, type: 2}
-      - {fileID: 11400000, guid: 0a9c1c0540aff824b8c11f63e23dad53, type: 2}
-      - {fileID: 11400000, guid: 4265b6cac21afcd4bbe1a5ec421912bb, type: 2}
+      - {fileID: 11400000, guid: 4407c1a706c7c254196a2e4d32d8ca96, type: 2}
+      - {fileID: 11400000, guid: 4457472673bd6954e8d50930f914e2f9, type: 2}
+      - {fileID: 11400000, guid: b9972a484f796d1428dd788e7cea4ec5, type: 2}
     - key: 1
       value:
-      - {fileID: 11400000, guid: efe32a5a484736d4dacc9779222c6f47, type: 2}
-      - {fileID: 11400000, guid: c6a55ff9b243bea4cb6108ba15694e1a, type: 2}
-      - {fileID: 11400000, guid: 8e23b730c8949f6418742775269a371b, type: 2}
+      - {fileID: 11400000, guid: c7e0e49b8ca0d4f468bc718c37dc6b00, type: 2}
+      - {fileID: 11400000, guid: 11ce5849b7c535449b8bb1e754e6e8cc, type: 2}
+      - {fileID: 11400000, guid: 1770de01c057e84458cf800e1a390c33, type: 2}
     - key: 2
       value:
-      - {fileID: 11400000, guid: 7cb3ed1283f48874fa0ac9da52a12621, type: 2}
-      - {fileID: 11400000, guid: e6bdc34e41d57f149bd0e468b8eb97b0, type: 2}
-      - {fileID: 11400000, guid: 1f1efb27b1373094fa55756402ab544c, type: 2}
+      - {fileID: 11400000, guid: 8ae61636169060d4abe0df4e9624d200, type: 2}
+      - {fileID: 11400000, guid: 99aa283d61ac7ef46bdf8caf811cbca3, type: 2}
+      - {fileID: 11400000, guid: 030d42cf0c0299d4e9630b2767a30561, type: 2}
     - key: 3
       value:
-      - {fileID: 11400000, guid: 0b74f50d5e240724ead1da288b914301, type: 2}
-      - {fileID: 11400000, guid: 16cbb6977e3b01e41989a391546b00ec, type: 2}
-      - {fileID: 11400000, guid: 9f6e32ada768e574ca14d5861165a972, type: 2}
+      - {fileID: 11400000, guid: 1c713335a4795734e855f4fa4eb32d02, type: 2}
+      - {fileID: 11400000, guid: a88a6ff6b32323c4e9d0a0907f001e85, type: 2}
+      - {fileID: 11400000, guid: 65b3e4c39316124449c315b77452a4c1, type: 2}
   effectivenesses:
     items:
     - key: 0
       value: 1
     - key: 1
-      value: 1
-    - key: 2
       value: 0
-    - key: 3
+    - key: 2
       value: 2
+    - key: 3
+      value: 1
   miniGamePrefabs:
   - {fileID: 3983903471434563919, guid: d0402185cbff3d042a96f8b978343af6, type: 3}
   - {fileID: 2901593520833307090, guid: 92d57d2821f43d049b7d8522824e03cc, type: 3}
