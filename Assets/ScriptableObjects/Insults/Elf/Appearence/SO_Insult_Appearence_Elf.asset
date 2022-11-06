@@ -12,5 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 014e5a29f183412ab2f78c73e26e264b, type: 3}
   m_Name: SO_Insult_Appearence_Elf
   m_EditorClassIdentifier: 
-  Insult: 
-  Responses: []
+  Insult: Your husband really was the pretty one.
+  Responses:
+  - "And you\u2019ll really be the dead one."
+  - At least, I had a husband. A partner is something you can only dream about.
+  - "Well, you\u2019re neither the pretty nor the smart one, if you ever have a partner."

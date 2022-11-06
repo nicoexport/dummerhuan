@@ -12,5 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 014e5a29f183412ab2f78c73e26e264b, type: 3}
   m_Name: SO_Insult_Appearence_Aasimar
   m_EditorClassIdentifier: 
-  Insult: 
-  Responses: []
+  Insult: Judging by your face, your parents must be goblins.
+  Responses:
+  - Judging by your intellect, you must not have a brain.
+  - "I don\u2019t think you understand basic genetics."
+  - "You\u2019ve slept through your biology classes, didn\u2019t you?"

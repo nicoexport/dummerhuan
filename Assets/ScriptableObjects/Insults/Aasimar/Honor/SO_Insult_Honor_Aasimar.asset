@@ -12,5 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 014e5a29f183412ab2f78c73e26e264b, type: 3}
   m_Name: SO_Insult_Honor_Aasimar
   m_EditorClassIdentifier: 
-  Insult: 
-  Responses: []
+  Insult: "Hmm\u2026 If you really are that great, shouldn\u2019t there be word about
+    your heroic tales?"
+  Responses:
+  - Maybe you just talked to the wrong people.
+  - Well, I never heard about yours either.
+  - To hear about heroic tales, you need people willing to talk with you.

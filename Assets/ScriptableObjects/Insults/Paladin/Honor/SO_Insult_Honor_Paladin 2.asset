@@ -10,10 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 014e5a29f183412ab2f78c73e26e264b, type: 3}
-  m_Name: SO_Insult_Family_Paladin
+  m_Name: SO_Insult_Honor_Paladin 2
   m_EditorClassIdentifier: 
-  Insult: Your mother is a cheap wench!
+  Insult: "Oh my, I heard many things about you already\u2026 Mostly how they can\u2019t
+    believe that you\u2019re smart enough to remember to breathe."
   Responses:
-  - "No, she\u2018s not cheap! She\u2018s really expensive."
-  - N-no! But your mom is!
-  - My mother is a human, not a tool!
+  - That are just stupid rumors!
+  - "Don\u2019t listen to them!"
+  - "I can do many more things like\u2026 like\u2026 Well, great things!"

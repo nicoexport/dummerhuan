@@ -12,5 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 014e5a29f183412ab2f78c73e26e264b, type: 3}
   m_Name: SO_Insult_Int_Aasimar
   m_EditorClassIdentifier: 
-  Insult: 
-  Responses: []
+  Insult: Figured someone like you is stupid enough to think they are above everyone.
+  Responses:
+  - How dare you?!
+  - A pathetic entity like yours is probably not even able to understand my glory!
+  - And who are you to come to an insulting conclusion like this one?

@@ -10,10 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 014e5a29f183412ab2f78c73e26e264b, type: 3}
-  m_Name: SO_Insult_Family_Paladin
+  m_Name: SO_Insult_Int_Aasimar 1
   m_EditorClassIdentifier: 
-  Insult: Your mother is a cheap wench!
+  Insult: "Don\u2019t hurt yourself trying to think. It\u2019s okay, that it\u2019s
+    not for you."
   Responses:
-  - "No, she\u2018s not cheap! She\u2018s really expensive."
-  - N-no! But your mom is!
-  - My mother is a human, not a tool!
+  - "Oh, that\u2019s rich coming from you!"
+  - "I\u2019d rather hurt you."
+  - Someone as pathetic as you should not be allowed to speak.

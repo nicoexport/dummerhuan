@@ -12,5 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 014e5a29f183412ab2f78c73e26e264b, type: 3}
   m_Name: SO_Insult_Honor_Paladin
   m_EditorClassIdentifier: 
-  Insult: 
-  Responses: []
+  Insult: Your reputation precedes you, but they were way too kind, when they said
+    how irrelevant you are.
+  Responses:
+  - "Your reputation said that you\u2019re an idiot - and they were right!"
+  - "B-but they are still talking about me. That's a good thing, isn\u2019t it?"
+  - At least they care about me. No one would ever care about your stupid face!

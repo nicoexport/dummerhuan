@@ -10,10 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 014e5a29f183412ab2f78c73e26e264b, type: 3}
-  m_Name: SO_Insult_Family_Paladin
+  m_Name: SO_Insult_Int_Aasimar 2
   m_EditorClassIdentifier: 
-  Insult: Your mother is a cheap wench!
+  Insult: "Oh cute! You\u2019re doing that bit again, where you\u2019re pretending
+    to be intelligent."
   Responses:
-  - "No, she\u2018s not cheap! She\u2018s really expensive."
-  - N-no! But your mom is!
-  - My mother is a human, not a tool!
+  - "It\u2019s not a bit!"
+  - You puny little soldier!
+  - "Keep doing that and I\u2019ll do that bit, where I\u2019ll rip your head off."

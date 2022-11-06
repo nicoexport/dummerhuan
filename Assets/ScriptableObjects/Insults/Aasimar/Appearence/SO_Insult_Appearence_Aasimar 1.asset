@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 014e5a29f183412ab2f78c73e26e264b, type: 3}
-  m_Name: SO_Insult_Family_Paladin
+  m_Name: SO_Insult_Appearence_Aasimar 1
   m_EditorClassIdentifier: 
-  Insult: Your mother is a cheap wench!
+  Insult: "The biggest insult I\u2019ve ever experienced is your appearance."
   Responses:
-  - "No, she\u2018s not cheap! She\u2018s really expensive."
-  - N-no! But your mom is!
-  - My mother is a human, not a tool!
+  - Weird way to say that you never looked in a mirror.
+  - "Then you must\u2019ve never experienced actual insults."
+  - "Are you sure you don\u2019t mean \u2018compliment\u2019?"
