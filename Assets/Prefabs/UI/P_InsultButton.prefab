@@ -111,7 +111,7 @@ MonoBehaviour:
   m_SpriteState:
     m_HighlightedSprite: {fileID: 21300000, guid: d787bb536a11f254ca077fec3888ad01, type: 3}
     m_PressedSprite: {fileID: 21300000, guid: d787bb536a11f254ca077fec3888ad01, type: 3}
-    m_SelectedSprite: {fileID: 21300000, guid: d787bb536a11f254ca077fec3888ad01, type: 3}
+    m_SelectedSprite: {fileID: 21300000, guid: c7fddd1d1ebe9be4d99846ee3260fb59, type: 3}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
@@ -238,8 +238,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Button
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: c4a3dce985a7a00469dd4a668a4dd325, type: 2}
+  m_sharedMaterial: {fileID: -5165568286284896414, guid: c4a3dce985a7a00469dd4a668a4dd325, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

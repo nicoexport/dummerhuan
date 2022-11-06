@@ -44,11 +44,11 @@ namespace Dummerhuan.Combat {
                 var effect = currentEnemy.Value.effectivenesses[intendedInsultType];
                 var response = intendedInsult.GetResponse();
                 
-                yield return playerTextBox.DisplayText_Co("You", intendedInsult.Insult, 0.07f);
-                yield return enemyTextBox.DisplayText_Co("Enemy", "...", 0.3f);
+                yield return playerTextBox.DisplayText_Co(intendedInsult.Insult, 0.07f);
+                yield return enemyTextBox.DisplayText_Co("...", 0.3f);
                 var reactionSprite = currentEnemy.Value.reactionSprites[(int)effect];
                 enemyPortrait.SetSpriteTempForSeconds(reactionSprite, 1.5f);
-                yield return enemyTextBox.DisplayText_Co("Enemy", response, 0.07f);
+                yield return enemyTextBox.DisplayText_Co(response, 0.07f);
 
                 var miniGamePrefab = currentEnemy.Value.GetMiniGamePrefab();
                 
@@ -70,7 +70,6 @@ namespace Dummerhuan.Combat {
                 if (playerCurrentHealth.Value <= 0) {
                     SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
                 }
-                Debug.Log("Turn ended");
                 insultButtonParent.SetActive(true);
             }
         }
