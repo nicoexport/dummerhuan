@@ -1,4 +1,8 @@
 using System.Collections;
+using Dummerhuan.Combat;
+using Dummerhuan.References;
+using MyBox;
+using ScriptableObjectArchitecture;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -8,8 +12,38 @@ namespace Dummerhuan.Overworld {
         [SerializeField] private FlippableTextBoxUI textBoxUI;
         [SerializeField] private float timeInSecondsPerChar = 0.08f;
         [SerializeField] private int combatSceneIndex = 1;
+
+        [Separator]
+        [Header("Game State")]
+        [SerializeField] private EnemySOReference currentEnemy;
+
+        [Separator] [Header("Enemies")] 
+        [SerializeField] private EnemySO paladin;
+        [SerializeField] private EnemySO aasimar;
+        [SerializeField] private EnemySO elf;
+
+        [Separator]
+        [SerializeField] private SpriteRenderer playerRenderer;
+        [SerializeField] private SpriteRenderer enemyRenderer;
+        
         private Speaker lastSpeaker = Speaker.None;
 
+        protected void Awake() {
+            SetupScene();
+        }
+
+        private void SetupScene() {
+            if (paladin.defeated.Value == false) {
+                currentEnemy.Value = paladin;
+                SetupSprites(paladin);
+            }
+        }
+
+        private void SetupSprites(EnemySO enemy) {
+            playerRenderer.sprite = enemy.playerChibiSprite;
+            enemyRenderer.sprite = enemy.chibiSprite;
+        }
+        
         public void StartDialog() {
             StartCoroutine(DisplayDialog_Co());
         }

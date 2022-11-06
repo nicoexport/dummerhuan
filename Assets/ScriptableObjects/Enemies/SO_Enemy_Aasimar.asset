@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f07a9d235d2d4672ac2ee869f2eb48f9, type: 3}
-  m_Name: SO_Enemy_Paladin
+  m_Name: SO_Enemy_Aasimar
   m_EditorClassIdentifier: 
   defeated:
     _useConstant: 0
     _constantValue: 0
-    _variable: {fileID: 11400000, guid: 9e55e2609b2f2cb4f83937ad79cebb60, type: 2}
+    _variable: {fileID: 11400000, guid: 39c791ac1b99519429fbb93dcd6bbc7a, type: 2}
   possibleInsults:
     items:
     - key: 0
@@ -51,11 +51,11 @@ MonoBehaviour:
   miniGamePrefabs:
   - {fileID: 3983903471434563919, guid: d0402185cbff3d042a96f8b978343af6, type: 3}
   - {fileID: 2901593520833307090, guid: 92d57d2821f43d049b7d8522824e03cc, type: 3}
-  idleSprite: {fileID: 21300000, guid: 062d185fc280f9444b0f8d0c5c07a464, type: 3}
+  idleSprite: {fileID: 21300000, guid: 625c323b771d99e459b12f103fe9d1ef, type: 3}
   reactionSprites:
-  - {fileID: 21300000, guid: 0e37c4eb68939444998cb415a7a6b8ab, type: 3}
-  - {fileID: 21300000, guid: 65cc75cf42823e244ac3c3fe4a7eb815, type: 3}
-  - {fileID: 21300000, guid: 5d2bcfe81c368bc47b33dc497cae9c7c, type: 3}
-  chibiSprite: {fileID: 21300000, guid: 113f1a90de4959641bfa4293f0b2039f, type: 3}
-  playerChibiSprite: {fileID: 21300000, guid: 1211411920944a5479a2bab31b919d68, type: 3}
-  speakerConfig: {fileID: 11400000, guid: f8fc368881af0b742b9caff6fed1f8f7, type: 2}
+  - {fileID: 21300000, guid: 1d9da5f8ebb619e4ba48f66e480afb47, type: 3}
+  - {fileID: 21300000, guid: 013f6d09a6d40ce42a09a1abc5e56cc1, type: 3}
+  - {fileID: 21300000, guid: 1e4cce43eab5d584fa77f25df227043b, type: 3}
+  chibiSprite: {fileID: 21300000, guid: 1211411920944a5479a2bab31b919d68, type: 3}
+  playerChibiSprite: {fileID: 21300000, guid: 113f1a90de4959641bfa4293f0b2039f, type: 3}
+  speakerConfig: {fileID: 11400000, guid: c9df05edf7192a347953e99690378170, type: 2}

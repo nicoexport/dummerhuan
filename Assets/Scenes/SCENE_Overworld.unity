@@ -459,7 +459,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &192926387
 Rigidbody2D:
@@ -773,6 +773,15 @@ MonoBehaviour:
   textBoxUI: {fileID: 5008947175022935740}
   timeInSecondsPerChar: 0.08
   combatSceneIndex: 1
+  currentEnemy:
+    _useConstant: 0
+    _constantValue: {fileID: 0}
+    _variable: {fileID: 0}
+  paladin: {fileID: 11400000, guid: ee309b0cac8e36445ad45d80b2cfff2e, type: 2}
+  aasimar: {fileID: 11400000, guid: 7a799f2c26e0cd74688279726dc30ad1, type: 2}
+  elf: {fileID: 11400000, guid: 2a76c557326cced4da636ff095fa9f5d, type: 2}
+  playerRenderer: {fileID: 192926383}
+  enemyRenderer: {fileID: 1890921232}
 --- !u!1 &1198450217
 GameObject:
   m_ObjectHideFlags: 0
@@ -1101,7 +1110,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &1890921236
 Rigidbody2D:

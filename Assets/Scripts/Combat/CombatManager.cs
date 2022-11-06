@@ -19,6 +19,7 @@ namespace Dummerhuan.Combat {
         [SerializeField] private TextBoxUI playerTextBox;
         [SerializeField] private PortraitUI enemyPortrait;
         [SerializeField] private GameObject insultButtonParent;
+        [SerializeField] private int overWorldSceneIndex = 2;
         
         private InsultSO intendedInsult;
         private Coroutine combatCoroutine;
@@ -68,7 +69,8 @@ namespace Dummerhuan.Combat {
                 currentMiniGame = null;
                 
                 if (playerCurrentHealth.Value <= 0) {
-                    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+                    currentEnemy.Value.defeated.Value = true;
+                    SceneManager.LoadScene(overWorldSceneIndex);
                 }
                 insultButtonParent.SetActive(true);
             }
