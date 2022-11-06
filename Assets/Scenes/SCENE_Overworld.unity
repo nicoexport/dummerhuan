@@ -207,8 +207,8 @@ Camera:
   m_GameObject: {fileID: 14385624}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0.254717, g: 0.15979888, b: 0.21576418, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -259,7 +259,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &67913930
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -469,7 +469,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 192926382}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -528,6 +528,54 @@ MonoBehaviour:
   target: {fileID: 2058751527}
   speed: 2
   eventInvoke: 0
+--- !u!1 &378073473
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 378073475}
+  - component: {fileID: 378073474}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &378073474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 378073473}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92074ce3ac974c31bf4230877c200f4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _sfxChannel: {fileID: 11400000, guid: b3d6bfcd3076c9a4b822c546bb58b835, type: 2}
+  _musicChannel: {fileID: 11400000, guid: 2b0b90182dcd0fb46891a9ddbf3ad791, type: 2}
+  _soundEmitterPrefab: {fileID: 1628332098531881321, guid: 2181e50f0a2f94a40b7540fb5d2fc128, type: 3}
+  _musicFadeDuration: 1
+--- !u!4 &378073475
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 378073473}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 706.4939, y: 403.1346, z: 2.119368}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &417475296
 GameObject:
   m_ObjectHideFlags: 0
@@ -776,7 +824,7 @@ MonoBehaviour:
   currentEnemy:
     _useConstant: 0
     _constantValue: {fileID: 0}
-    _variable: {fileID: 0}
+    _variable: {fileID: 11400000, guid: 99dd2fe4b1ac0794ab8adc105972ca36, type: 2}
   paladin: {fileID: 11400000, guid: ee309b0cac8e36445ad45d80b2cfff2e, type: 2}
   aasimar: {fileID: 11400000, guid: 7a799f2c26e0cd74688279726dc30ad1, type: 2}
   elf: {fileID: 11400000, guid: 2a76c557326cced4da636ff095fa9f5d, type: 2}
@@ -1120,7 +1168,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1890921231}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -1408,7 +1456,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3413626395864261403, guid: c4b540015b3eab64cb26a75d395a3827, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 150
+      value: 239
       objectReference: {fileID: 0}
     - target: {fileID: 3413626395864261403, guid: c4b540015b3eab64cb26a75d395a3827, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x

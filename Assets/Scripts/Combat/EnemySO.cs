@@ -1,4 +1,5 @@
 using Dummerhuan.Audio;
+using Dummerhuan.Overworld;
 using MyBox;
 using ScriptableObjectArchitecture;
 using Slothsoft.UnityExtensions;
@@ -26,6 +27,9 @@ namespace Dummerhuan.Combat {
         [Header("Overworld")]
         public Sprite chibiSprite;
         public Sprite playerChibiSprite;
+
+        [Separator] 
+        public DialogSO overWorldDialog;
         
         [Separator] 
         public AudioConfigSo speakerConfig;

@@ -34,14 +34,23 @@ namespace Dummerhuan.Overworld {
 
         private void SetupScene() {
             if (paladin.defeated.Value == false) {
+                Debug.Log("setup paladin");
                 currentEnemy.Value = paladin;
-                SetupSprites(paladin);
+            } else if(aasimar.defeated.Value == false) {
+                currentEnemy.Value = aasimar;
             }
+            
+            
+            SetupScene(currentEnemy.Value);
+            
         }
 
-        private void SetupSprites(EnemySO enemy) {
+        private void SetupScene(EnemySO enemy) {
             playerRenderer.sprite = enemy.playerChibiSprite;
+            playerRenderer.flipX = true;
             enemyRenderer.sprite = enemy.chibiSprite;
+
+            currentDialog = enemy.overWorldDialog;
         }
         
         public void StartDialog() {
