@@ -40,6 +40,9 @@ namespace Dummerhuan
             onCredits = !onCredits;
 
             if (onCredits) {
+                var r = Random.Range(0, portraits.Length);
+                portraitImage.sprite = portraits[r];
+
                 creditsScreen.SetActive(true);
             } else {
                 creditsScreen.SetActive(false);

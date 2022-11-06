@@ -2242,7 +2242,11 @@ MonoBehaviour:
     _variable: {fileID: 11400000, guid: 690cdb1fac88e5d49b400b132c93d5de, type: 2}
   creditsScreen: {fileID: 532200420}
   portraitImage: {fileID: 966779469}
-  portraits: []
+  portraits:
+  - {fileID: 21300000, guid: 062d185fc280f9444b0f8d0c5c07a464, type: 3}
+  - {fileID: 21300000, guid: 625c323b771d99e459b12f103fe9d1ef, type: 3}
+  - {fileID: 21300000, guid: f7f490133fde98b448a888913086bb4d, type: 3}
+  - {fileID: 21300000, guid: c682aeb15ba9e854abad05496117b1de, type: 3}
 --- !u!4 &1541929122
 Transform:
   m_ObjectHideFlags: 0
