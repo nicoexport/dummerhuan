@@ -54,7 +54,7 @@ MonoBehaviour:
   - 15
   bulletCollection: {fileID: 11400000, guid: a8c16947a73ac4647a60eb3e9293d0e5, type: 2}
   col: {fileID: 2901593522411232869}
-  damageBreakpoint: 10
+  damageBreakpoint: 40
 --- !u!1 &2901593520951227506
 GameObject:
   m_ObjectHideFlags: 0

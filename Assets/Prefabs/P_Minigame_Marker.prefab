@@ -48,8 +48,8 @@ MonoBehaviour:
   goodPartValue: 0.57
   perfectPartValue: 0.24
   damageValues:
+  - 20
   - 10
-  - 7
   - 5
   marker: {fileID: 3983903471520821113}
   markerPos: {fileID: 3983903471520821118}

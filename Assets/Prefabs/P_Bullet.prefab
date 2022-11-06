@@ -137,3 +137,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collection: {fileID: 11400000, guid: a8c16947a73ac4647a60eb3e9293d0e5, type: 2}
+  damage: 4
