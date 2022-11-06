@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 014e5a29f183412ab2f78c73e26e264b, type: 3}
+  m_Name: SO_Insult_Family_Elf 2
+  m_EditorClassIdentifier: 
+  Insult: "Let me tell you that much - the gods were incredibly unimpressed by your
+    husband\u2019s work."
+  Responses:
+  - How arrogant of you to talk for the gods!
+  - You take that back right now.
+  - But they will be impressed once they see my fist in your face.

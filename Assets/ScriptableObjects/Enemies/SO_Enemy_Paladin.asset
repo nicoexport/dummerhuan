@@ -12,24 +12,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f07a9d235d2d4672ac2ee869f2eb48f9, type: 3}
   m_Name: SO_Enemy_Paladin
   m_EditorClassIdentifier: 
+  defeated:
+    _useConstant: 0
+    _constantValue: 0
+    _variable: {fileID: 11400000, guid: 9e55e2609b2f2cb4f83937ad79cebb60, type: 2}
   possibleInsults:
     items:
     - key: 0
       value:
-      - {fileID: 11400000, guid: 76a28fc4d8e6dba43b9f74121bd65b51, type: 2}
-      - {fileID: 11400000, guid: 4a7f618528c69e847b3254e4791fec6e, type: 2}
+      - {fileID: 11400000, guid: 4125223156829d24c8183d3927bf183b, type: 2}
+      - {fileID: 11400000, guid: 0a9c1c0540aff824b8c11f63e23dad53, type: 2}
+      - {fileID: 11400000, guid: 4265b6cac21afcd4bbe1a5ec421912bb, type: 2}
     - key: 1
       value:
-      - {fileID: 11400000, guid: 06e6a556a3203044eb51c818e4e49269, type: 2}
-      - {fileID: 11400000, guid: 7e0c9e18dc50310439348e483512b69d, type: 2}
+      - {fileID: 11400000, guid: efe32a5a484736d4dacc9779222c6f47, type: 2}
+      - {fileID: 11400000, guid: c6a55ff9b243bea4cb6108ba15694e1a, type: 2}
+      - {fileID: 11400000, guid: 8e23b730c8949f6418742775269a371b, type: 2}
     - key: 2
       value:
-      - {fileID: 11400000, guid: 06e6a556a3203044eb51c818e4e49269, type: 2}
-      - {fileID: 11400000, guid: 7e0c9e18dc50310439348e483512b69d, type: 2}
+      - {fileID: 11400000, guid: 7cb3ed1283f48874fa0ac9da52a12621, type: 2}
+      - {fileID: 11400000, guid: e6bdc34e41d57f149bd0e468b8eb97b0, type: 2}
+      - {fileID: 11400000, guid: 1f1efb27b1373094fa55756402ab544c, type: 2}
     - key: 3
       value:
-      - {fileID: 11400000, guid: 06e6a556a3203044eb51c818e4e49269, type: 2}
-      - {fileID: 11400000, guid: 7e0c9e18dc50310439348e483512b69d, type: 2}
+      - {fileID: 11400000, guid: 0b74f50d5e240724ead1da288b914301, type: 2}
+      - {fileID: 11400000, guid: 16cbb6977e3b01e41989a391546b00ec, type: 2}
+      - {fileID: 11400000, guid: 9f6e32ada768e574ca14d5861165a972, type: 2}
   effectivenesses:
     items:
     - key: 0
@@ -48,4 +56,6 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0e37c4eb68939444998cb415a7a6b8ab, type: 3}
   - {fileID: 21300000, guid: 65cc75cf42823e244ac3c3fe4a7eb815, type: 3}
   - {fileID: 21300000, guid: 5d2bcfe81c368bc47b33dc497cae9c7c, type: 3}
-  speakerConfig: {fileID: 11400000, guid: c9df05edf7192a347953e99690378170, type: 2}
+  chibiSprite: {fileID: 21300000, guid: 113f1a90de4959641bfa4293f0b2039f, type: 3}
+  playerChibiSprite: {fileID: 21300000, guid: 1211411920944a5479a2bab31b919d68, type: 3}
+  speakerConfig: {fileID: 11400000, guid: f8fc368881af0b742b9caff6fed1f8f7, type: 2}

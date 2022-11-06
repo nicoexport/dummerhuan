@@ -1,11 +1,16 @@
 using Dummerhuan.Audio;
 using MyBox;
+using ScriptableObjectArchitecture;
 using Slothsoft.UnityExtensions;
 using UnityEngine;
 
 namespace Dummerhuan.Combat {
     [CreateAssetMenu(menuName = "ScriptableObjects/Enemy", order = 0)]
     public class EnemySO : ScriptableObject {
+
+        public BoolReference defeated;
+        
+        [Separator]
         public SerializableKeyValuePairs<InsultType, InsultSO[]> possibleInsults = 
             new();
 
@@ -15,9 +20,13 @@ namespace Dummerhuan.Combat {
         public GameObject[] miniGamePrefabs;
 
         [Separator] 
+        [Header("Combat")]
         public Sprite idleSprite;
         public Sprite[] reactionSprites;
-
+        [Header("Overworld")]
+        public Sprite chibiSprite;
+        public Sprite playerChibiSprite;
+        
         [Separator] 
         public AudioConfigSo speakerConfig;
 

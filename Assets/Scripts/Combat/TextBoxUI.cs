@@ -7,8 +7,8 @@ using UnityEngine.Events;
 
 namespace Dummerhuan.Combat {
     public class TextBoxUI : MonoBehaviour {
-        [SerializeField] private RectTransform panel;
-        [SerializeField] private TextMeshProUGUI textMesh;
+        [SerializeField] protected RectTransform panel;
+        [SerializeField] protected TextMeshProUGUI textMesh;
 
         public UnityEvent OnDisplayCharacter;
 
@@ -16,11 +16,11 @@ namespace Dummerhuan.Combat {
             panel.gameObject.SetActive(false);
         }
 
-        public IEnumerator DisplayText_Co(string speaker, string message, float timeInSecondsPerChar) {
+        public IEnumerator DisplayText_Co(string message, float timeInSecondsPerChar) {
             panel.gameObject.SetActive(true);
+            textMesh.text = "";
             var builder = new StringBuilder();
-            builder.Append(speaker + ": ");
-            textMesh.text = builder.ToString();
+
             yield return new WaitForSeconds(timeInSecondsPerChar);
             
             foreach (char c in message)
