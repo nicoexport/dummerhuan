@@ -14,6 +14,11 @@ namespace Dummerhuan.Audio {
             set => _audioCue = value;
         }
 
+        public AudioConfigSo Config {
+            get => _audioConfig;
+            set => _audioConfig = value;
+        }
+
         private void Start() {
             if (_playOnStart) {
                 RequestAudio(transform.position);

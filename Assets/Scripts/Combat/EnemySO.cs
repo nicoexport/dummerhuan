@@ -1,3 +1,4 @@
+using Dummerhuan.Audio;
 using MyBox;
 using Slothsoft.UnityExtensions;
 using UnityEngine;
@@ -16,6 +17,9 @@ namespace Dummerhuan.Combat {
         [Separator] 
         public Sprite idleSprite;
         public Sprite[] reactionSprites;
+
+        [Separator] 
+        public AudioConfigSo speakerConfig;
 
         public GameObject GetMiniGamePrefab() {
             int rand = Random.Range(0, miniGamePrefabs.Length);
