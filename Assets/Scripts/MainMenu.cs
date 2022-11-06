@@ -2,6 +2,7 @@ using Dummerhuan.References;
 using ScriptableObjectArchitecture;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 namespace Dummerhuan
 {
@@ -13,6 +14,13 @@ namespace Dummerhuan
         [SerializeField] private BoolReference paladinState;
         [SerializeField] private BoolReference aasimarState;
         [SerializeField] private BoolReference elfState;
+
+        private bool onCredits;
+        [SerializeField] private GameObject creditsScreen;
+        [SerializeField] private Image portraitImage;
+
+        [SerializeField] private Sprite[] portraits;
+
 
         public void Continue() {
             SceneManager.LoadScene(2);
@@ -29,7 +37,13 @@ namespace Dummerhuan
         }
 
         public void Credits() {
+            onCredits = !onCredits;
 
+            if (onCredits) {
+                creditsScreen.SetActive(true);
+            } else {
+                creditsScreen.SetActive(false);
+            }
         }
 
         public void Exit() {
