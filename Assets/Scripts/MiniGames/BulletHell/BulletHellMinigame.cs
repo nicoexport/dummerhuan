@@ -23,10 +23,10 @@ namespace Dummerhuan.BulletHell {
         }
 
         protected void Update() {
-            CheckBoundries();
+            CheckBoundaries();
         }
 
-        private void CheckBoundries() {
+        private void CheckBoundaries() {
             if (!col || finished) {
                 return;
             }

@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using System.Text;
 using TMPro;
 using UnityEngine;
 
@@ -12,10 +13,21 @@ namespace Dummerhuan.Combat {
             panel.gameObject.SetActive(false);
         }
 
-        public IEnumerator DisplayText_Co(string text, float timeInSeconds) {
+        public IEnumerator DisplayText_Co(string speaker, string message, float timeInSecondsPerChar) {
             panel.gameObject.SetActive(true);
-            textMesh.text = text;
-            yield return new WaitForSeconds(timeInSeconds);
+            var builder = new StringBuilder();
+            builder.Append(speaker + ": ");
+            textMesh.text = builder.ToString();
+            yield return new WaitForSeconds(timeInSecondsPerChar);
+            
+            foreach (char c in message)
+            {
+                yield return new WaitForSeconds(timeInSecondsPerChar);
+                builder.Append(c);
+                textMesh.text = builder.ToString();
+            }
+
+            yield return new WaitForSeconds(1f);
             panel.gameObject.SetActive(false);
         }
     }

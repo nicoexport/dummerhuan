@@ -43,13 +43,14 @@ namespace Dummerhuan.Combat {
                 
                 var effect = currentEnemy.Value.effectivenesses[intendedInsultType];
                 
-                yield return playerTextBox.DisplayText_Co("You: " + intendedInsult.Insult, 1f);
-                yield return enemyTextBox.DisplayText_Co("Enemy: ...", 1f);
+                yield return playerTextBox.DisplayText_Co("You", intendedInsult.Insult, 0.07f);
+                yield return enemyTextBox.DisplayText_Co("Enemy", "...", 0.3f);
                 var reactionSprite = currentEnemy.Value.reactionSprites[(int)effect];
                 enemyPortrait.SetSpriteTempForSeconds(reactionSprite, 1.5f);
-                yield return enemyTextBox.DisplayText_Co("Enemy: " + intendedInsult.Response, 1.5f);
+                yield return enemyTextBox.DisplayText_Co("Enemy", intendedInsult.Response, 0.07f);
 
-                var miniGamePrefab = currentEnemy.Value.miniGamePrefab;
+                var miniGamePrefab = currentEnemy.Value.GetMiniGamePrefab();
+                
                 var miniGame = Instantiate(miniGamePrefab, transform.position + miniGameSpawnOffset, 
                     quaternion.identity);
                 miniGame.TryGetComponent(out currentMiniGame);
@@ -57,6 +58,9 @@ namespace Dummerhuan.Combat {
                     currentMiniGame.Setup(effect);
                     yield return currentMiniGame.Execute();
                 }
+
+                enemyPortrait.SetSpriteTempForSeconds(reactionSprite, 1f);
+                yield return new WaitForSeconds(1f);
                 
                 intendedInsult = null;
                 intendedInsultType = InsultType.None;
