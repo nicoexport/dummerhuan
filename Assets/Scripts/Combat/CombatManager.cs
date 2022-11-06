@@ -50,7 +50,7 @@ namespace Dummerhuan.Combat {
                 yield return playerTextBox.DisplayText_Co(intendedInsult.Insult, 0.07f);
                 yield return enemyTextBox.DisplayText_Co("...", 0.3f);
                 var reactionSprite = currentEnemy.Value.reactionSprites[(int)effect];
-                enemyPortrait.SetSpriteTempForSeconds(reactionSprite, 1.5f);
+                enemyPortrait.SetSpriteTempForSeconds(reactionSprite, 5f);
                 yield return enemyTextBox.DisplayText_Co(response, 0.07f);
 
                 var miniGamePrefab = currentEnemy.Value.GetMiniGamePrefab();
@@ -71,11 +71,14 @@ namespace Dummerhuan.Combat {
                 currentMiniGame = null;
                 
                 if (playerCurrentHealth.Value <= 0) {
+                    currentEnemy.Value.defeated.Value = true;
                     if (currentEnemy.Value == lastEnemy) {
-                        SceneManager.LoadScene(0);
+                        yield return SceneManager.LoadSceneAsync(0);
+                        Debug.Log("finished");
+                        StopCoroutine(combatCoroutine);
+                        
                     }
                     
-                    currentEnemy.Value.defeated.Value = true;
                     SceneManager.LoadScene(overWorldSceneIndex);
                 }
                 insultButtonParent.SetActive(true);
