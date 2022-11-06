@@ -12,22 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71381fc8166a4978a6d7a99d90d23558, type: 3}
   m_Name: SO_Dialog_Paladin
   m_EditorClassIdentifier: 
-  dialogLines:
-    items:
-    - key: Stop right there, you devilish fool!
-      value: 1
-    - key: Excuse me, who are you calling a fool?
-      value: 0
-    - key: Do not play dumb. I saw you engaging with the devil himself. Stop that
-        at once or you shall experience the rage of the gods!
-      value: 1
-    - key: Hah. And what will your gods do to me? Send me to hell so that Lucifer
-        can embrace me with open arms? Sounds rather cozy.
-      value: 0
-    - key: Wha- no! I told you to cease this satanic work.
-      value: 1
-    - key: 
-      value: 0
   allDialogLines:
   - message: Stop right there, you devilish fool!
     speaker: 1
@@ -39,5 +23,7 @@ MonoBehaviour:
   - message: Hah. And what will your gods do to me? Send me to hell so that Lucifer
       can embrace me with open arms? Sounds rather cozy.
     speaker: 0
-  - message: Make me.
+  - message: Wha-no! I told you to cease this satanic work.
     speaker: 1
+  - message: Make Me.
+    speaker: 0

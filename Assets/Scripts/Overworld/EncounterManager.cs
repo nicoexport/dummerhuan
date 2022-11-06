@@ -44,8 +44,7 @@ namespace Dummerhuan.Overworld {
             } else if(aasimar.defeated.Value == false) {
                 currentEnemy.Value = aasimar;
                 corpseCount = 1;
-            }
-            else if (elf.defeated.Value == false) {
+            } else if (elf.defeated.Value == false) {
                 currentEnemy.Value = elf;
                 corpseCount = 2;
             } else {
