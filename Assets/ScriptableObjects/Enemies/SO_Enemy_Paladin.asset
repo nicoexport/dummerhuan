@@ -48,4 +48,4 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0e37c4eb68939444998cb415a7a6b8ab, type: 3}
   - {fileID: 21300000, guid: 65cc75cf42823e244ac3c3fe4a7eb815, type: 3}
   - {fileID: 21300000, guid: 5d2bcfe81c368bc47b33dc497cae9c7c, type: 3}
-  speakerConfig: {fileID: 11400000, guid: f8fc368881af0b742b9caff6fed1f8f7, type: 2}
+  speakerConfig: {fileID: 11400000, guid: c9df05edf7192a347953e99690378170, type: 2}
