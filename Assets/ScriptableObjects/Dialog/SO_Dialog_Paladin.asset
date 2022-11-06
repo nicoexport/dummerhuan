@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71381fc8166a4978a6d7a99d90d23558, type: 3}
+  m_Name: SO_Dialog_Paladin
+  m_EditorClassIdentifier: 
+  dialogLines:
+    items:
+    - key: Stop right there, you devilish fool!
+      value: 1
+    - key: Excuse me, who are you calling a fool?
+      value: 0
+    - key: Do not play dumb. I saw you engaging with the devil himself. Stop that
+        at once or you shall experience the rage of the gods!
+      value: 1
+    - key: Hah. And what will your gods do to me? Send me to hell so that Lucifer
+        can embrace me with open arms? Sounds rather cozy.
+      value: 0
+    - key: Wha- no! I told you to cease this satanic work.
+      value: 1
+    - key: Make me.
+      value: 0

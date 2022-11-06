@@ -1,0 +1,62 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f07a9d235d2d4672ac2ee869f2eb48f9, type: 3}
+  m_Name: SO_Enemy_Elf
+  m_EditorClassIdentifier: 
+  defeated:
+    _useConstant: 0
+    _constantValue: 0
+    _variable: {fileID: 11400000, guid: 690cdb1fac88e5d49b400b132c93d5de, type: 2}
+  possibleInsults:
+    items:
+    - key: 0
+      value:
+      - {fileID: 11400000, guid: 4125223156829d24c8183d3927bf183b, type: 2}
+      - {fileID: 11400000, guid: 0a9c1c0540aff824b8c11f63e23dad53, type: 2}
+      - {fileID: 11400000, guid: 4265b6cac21afcd4bbe1a5ec421912bb, type: 2}
+    - key: 1
+      value:
+      - {fileID: 11400000, guid: efe32a5a484736d4dacc9779222c6f47, type: 2}
+      - {fileID: 11400000, guid: c6a55ff9b243bea4cb6108ba15694e1a, type: 2}
+      - {fileID: 11400000, guid: 8e23b730c8949f6418742775269a371b, type: 2}
+    - key: 2
+      value:
+      - {fileID: 11400000, guid: 7cb3ed1283f48874fa0ac9da52a12621, type: 2}
+      - {fileID: 11400000, guid: e6bdc34e41d57f149bd0e468b8eb97b0, type: 2}
+      - {fileID: 11400000, guid: 1f1efb27b1373094fa55756402ab544c, type: 2}
+    - key: 3
+      value:
+      - {fileID: 11400000, guid: 0b74f50d5e240724ead1da288b914301, type: 2}
+      - {fileID: 11400000, guid: 16cbb6977e3b01e41989a391546b00ec, type: 2}
+      - {fileID: 11400000, guid: 9f6e32ada768e574ca14d5861165a972, type: 2}
+  effectivenesses:
+    items:
+    - key: 0
+      value: 1
+    - key: 1
+      value: 1
+    - key: 2
+      value: 0
+    - key: 3
+      value: 2
+  miniGamePrefabs:
+  - {fileID: 3983903471434563919, guid: d0402185cbff3d042a96f8b978343af6, type: 3}
+  - {fileID: 2901593520833307090, guid: 92d57d2821f43d049b7d8522824e03cc, type: 3}
+  idleSprite: {fileID: 21300000, guid: f7f490133fde98b448a888913086bb4d, type: 3}
+  reactionSprites:
+  - {fileID: 21300000, guid: 42b3b62b11bf5b74a8351cb71450038e, type: 3}
+  - {fileID: 21300000, guid: 1b6677f33f4bbad4cb14318083dfa18b, type: 3}
+  - {fileID: 21300000, guid: d51d6d1d2f6f0774bbb9c69b08091dab, type: 3}
+  chibiSprite: {fileID: 21300000, guid: 1211411920944a5479a2bab31b919d68, type: 3}
+  playerChibiSprite: {fileID: 0}
+  overWorldDialog: {fileID: 11400000, guid: d89495c542198c5489e92fd978a96e8d, type: 2}
+  speakerConfig: {fileID: 11400000, guid: f6fbcc7a59cf731489b84d4f312c7efa, type: 2}
