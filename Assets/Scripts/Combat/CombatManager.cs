@@ -7,6 +7,7 @@ using ScriptableObjectArchitecture;
 using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Object = UnityEngine.Object;
 using Random = UnityEngine.Random;
 
 namespace Dummerhuan.Combat {
@@ -20,12 +21,13 @@ namespace Dummerhuan.Combat {
         [SerializeField] private PortraitUI enemyPortrait;
         [SerializeField] private GameObject insultButtonParent;
         [SerializeField] private int overWorldSceneIndex = 2;
+        [SerializeField] private EnemySO lastEnemy;
         
         private InsultSO intendedInsult;
         private Coroutine combatCoroutine;
         private IMiniGame currentMiniGame;
         private InsultType intendedInsultType;
-        
+
         protected void Awake() {
             if (combatCoroutine != null) {
                 StopCoroutine(combatCoroutine);
@@ -69,6 +71,10 @@ namespace Dummerhuan.Combat {
                 currentMiniGame = null;
                 
                 if (playerCurrentHealth.Value <= 0) {
+                    if (currentEnemy.Value == lastEnemy) {
+                        SceneManager.LoadScene(0);
+                    }
+                    
                     currentEnemy.Value.defeated.Value = true;
                     SceneManager.LoadScene(overWorldSceneIndex);
                 }

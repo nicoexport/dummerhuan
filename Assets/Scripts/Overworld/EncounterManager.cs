@@ -13,6 +13,7 @@ namespace Dummerhuan.Overworld {
         [SerializeField] private FlippableTextBoxUI textBoxUI;
         [SerializeField] private float timeInSecondsPerChar = 0.08f;
         [SerializeField] private int combatSceneIndex = 1;
+        
 
         [Separator]
         [Header("Game State")]
@@ -26,31 +27,51 @@ namespace Dummerhuan.Overworld {
         [Separator]
         [SerializeField] private SpriteRenderer playerRenderer;
         [SerializeField] private SpriteRenderer enemyRenderer;
+        [SerializeField] private SpriteRenderer corpseRenderer;
+
+        [SerializeField] private Sprite[] corpseSprites;
         
         private Speaker lastSpeaker = Speaker.None;
 
         protected void Awake() {
-            SetupScene();
+            Setup();
         }
 
-        private void SetupScene() {
+        private void Setup() {
+            int corpseCount = 0;
             if (paladin.defeated.Value == false) {
-                Debug.Log("setup paladin");
                 currentEnemy.Value = paladin;
             } else if(aasimar.defeated.Value == false) {
                 currentEnemy.Value = aasimar;
+                corpseCount = 1;
             }
-            
-            
-            SetupScene(currentEnemy.Value);
-            
+            else if (elf.defeated.Value == false) {
+                currentEnemy.Value = elf;
+                corpseCount = 2;
+            } else {
+                ResetGameState();
+            }
+
+            SetupScene(currentEnemy.Value, corpseCount);
         }
 
-        private void SetupScene(EnemySO enemy) {
+        private void ResetGameState() {
+            paladin.defeated.Value = false;
+            aasimar.defeated.Value = false;
+            elf.defeated.Value = false;
+            Setup();
+        }
+
+        private void SetupScene(EnemySO enemy, int corpseCount) {
             playerRenderer.sprite = enemy.playerChibiSprite;
             playerRenderer.flipX = true;
             enemyRenderer.sprite = enemy.chibiSprite;
 
+            if (corpseCount == 0) {
+                corpseRenderer.sprite = null;
+            } else {
+                corpseRenderer.sprite = corpseSprites[corpseCount - 1];
+            }
             currentDialog = enemy.overWorldDialog;
         }
         
