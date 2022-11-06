@@ -24,3 +24,14 @@ MonoBehaviour:
       value: 0
     - key: "Then I\u2019ll make you feel it."
       value: 1
+  allDialogLines:
+  - message: What did you do to my husband?!
+    speaker: 1
+  - message: Have a look for yourself. I think it is pretty obvious.
+    speaker: 0
+  - message: "Don\u2019t you feel any remorse?"
+    speaker: 1
+  - message: "Interesting question. Let me think\u2026 No."
+    speaker: 0
+  - message: "Then I\u2019ll make you feel it."
+    speaker: 1

@@ -7,6 +7,7 @@ using ScriptableObjectArchitecture;
 using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Object = UnityEngine.Object;
 using Random = UnityEngine.Random;
 
 namespace Dummerhuan.Combat {
@@ -20,12 +21,13 @@ namespace Dummerhuan.Combat {
         [SerializeField] private PortraitUI enemyPortrait;
         [SerializeField] private GameObject insultButtonParent;
         [SerializeField] private int overWorldSceneIndex = 2;
+        [SerializeField] private EnemySO lastEnemy;
         
         private InsultSO intendedInsult;
         private Coroutine combatCoroutine;
         private IMiniGame currentMiniGame;
         private InsultType intendedInsultType;
-        
+
         protected void Awake() {
             if (combatCoroutine != null) {
                 StopCoroutine(combatCoroutine);
@@ -48,7 +50,7 @@ namespace Dummerhuan.Combat {
                 yield return playerTextBox.DisplayText_Co(intendedInsult.Insult, 0.07f);
                 yield return enemyTextBox.DisplayText_Co("...", 0.3f);
                 var reactionSprite = currentEnemy.Value.reactionSprites[(int)effect];
-                enemyPortrait.SetSpriteTempForSeconds(reactionSprite, 1.5f);
+                enemyPortrait.SetSpriteTempForSeconds(reactionSprite, 5f);
                 yield return enemyTextBox.DisplayText_Co(response, 0.07f);
 
                 var miniGamePrefab = currentEnemy.Value.GetMiniGamePrefab();
@@ -70,6 +72,13 @@ namespace Dummerhuan.Combat {
                 
                 if (playerCurrentHealth.Value <= 0) {
                     currentEnemy.Value.defeated.Value = true;
+                    if (currentEnemy.Value == lastEnemy) {
+                        yield return SceneManager.LoadSceneAsync(0);
+                        Debug.Log("finished");
+                        StopCoroutine(combatCoroutine);
+                        
+                    }
+                    
                     SceneManager.LoadScene(overWorldSceneIndex);
                 }
                 insultButtonParent.SetActive(true);

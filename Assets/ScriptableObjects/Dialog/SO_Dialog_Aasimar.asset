@@ -25,3 +25,15 @@ MonoBehaviour:
       value: 0
     - key: For your arrogance, you shall be punished!
       value: 1
+  allDialogLines:
+  - message: What have you done, man of the gods?!
+    speaker: 1
+  - message: Who? Me? Oh, yeah. I knocked him out.
+    speaker: 0
+  - message: Are you not ashamed of yourself? Who gave you the right to strike judgment
+      upon others?
+    speaker: 1
+  - message: Who gave you the right to judge me?
+    speaker: 0
+  - message: For your arrogance, you shall be punished!
+    speaker: 1

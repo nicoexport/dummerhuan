@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: VAR_Bool_Defeated_Elf
   m_EditorClassIdentifier: 
   DeveloperDescription:
-    _value: 
+    _value: .
   _value: 0
   _readOnly: 0
   _raiseWarning: 1

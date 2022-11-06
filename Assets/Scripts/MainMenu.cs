@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using Dummerhuan.References;
 using ScriptableObjectArchitecture;
 using UnityEngine;
@@ -16,20 +14,8 @@ namespace Dummerhuan
         [SerializeField] private BoolReference aasimarState;
         [SerializeField] private BoolReference elfState;
 
-        // Start is called before the first frame update
-        void Start()
-        {
-        
-        }
-
-        // Update is called once per frame
-        void Update()
-        {
-        
-        }
-
         public void Continue() {
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene(2);
         }
 
         public void NewGame() {
@@ -39,7 +25,7 @@ namespace Dummerhuan
             aasimarState.Value = false;
             elfState.Value = false;
 
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene(2);
         }
 
         public void Credits() {

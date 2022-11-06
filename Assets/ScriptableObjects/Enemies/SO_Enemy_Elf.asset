@@ -20,34 +20,34 @@ MonoBehaviour:
     items:
     - key: 0
       value:
-      - {fileID: 11400000, guid: 4125223156829d24c8183d3927bf183b, type: 2}
-      - {fileID: 11400000, guid: 0a9c1c0540aff824b8c11f63e23dad53, type: 2}
-      - {fileID: 11400000, guid: 4265b6cac21afcd4bbe1a5ec421912bb, type: 2}
+      - {fileID: 11400000, guid: cfe7cbe4f46fafe47ae8d5654bef6cdf, type: 2}
+      - {fileID: 11400000, guid: 78c29b8be9a47264783d31c497a35307, type: 2}
+      - {fileID: 11400000, guid: b4589fad29755d74a8f80172ca2ac4d1, type: 2}
     - key: 1
       value:
-      - {fileID: 11400000, guid: efe32a5a484736d4dacc9779222c6f47, type: 2}
-      - {fileID: 11400000, guid: c6a55ff9b243bea4cb6108ba15694e1a, type: 2}
-      - {fileID: 11400000, guid: 8e23b730c8949f6418742775269a371b, type: 2}
+      - {fileID: 11400000, guid: c7e5bcb67fdaec34488878965e47c94c, type: 2}
+      - {fileID: 11400000, guid: 9b924fd90a93bfd478dc6eeab71ad97a, type: 2}
+      - {fileID: 11400000, guid: d1862102a88f7f94f904cde9967a4ae0, type: 2}
     - key: 2
       value:
-      - {fileID: 11400000, guid: 7cb3ed1283f48874fa0ac9da52a12621, type: 2}
-      - {fileID: 11400000, guid: e6bdc34e41d57f149bd0e468b8eb97b0, type: 2}
-      - {fileID: 11400000, guid: 1f1efb27b1373094fa55756402ab544c, type: 2}
+      - {fileID: 11400000, guid: 9d915cea727273544ab8e181fbc80a3f, type: 2}
+      - {fileID: 11400000, guid: 6e18d460033292644b469fe51580c9af, type: 2}
+      - {fileID: 11400000, guid: 28a7fab68c4e68847b45ed134d19c34d, type: 2}
     - key: 3
       value:
-      - {fileID: 11400000, guid: 0b74f50d5e240724ead1da288b914301, type: 2}
-      - {fileID: 11400000, guid: 16cbb6977e3b01e41989a391546b00ec, type: 2}
-      - {fileID: 11400000, guid: 9f6e32ada768e574ca14d5861165a972, type: 2}
+      - {fileID: 11400000, guid: 1654ca715c6d73b40b4f45a578ac27f4, type: 2}
+      - {fileID: 11400000, guid: 1f771bd0d0551b248a564d6266c62c49, type: 2}
+      - {fileID: 11400000, guid: 0b5939ba56d9de044b89d0e1376ebb08, type: 2}
   effectivenesses:
     items:
     - key: 0
       value: 1
     - key: 1
-      value: 1
-    - key: 2
-      value: 0
-    - key: 3
       value: 2
+    - key: 2
+      value: 1
+    - key: 3
+      value: 0
   miniGamePrefabs:
   - {fileID: 3983903471434563919, guid: d0402185cbff3d042a96f8b978343af6, type: 3}
   - {fileID: 2901593520833307090, guid: 92d57d2821f43d049b7d8522824e03cc, type: 3}
@@ -57,6 +57,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 1b6677f33f4bbad4cb14318083dfa18b, type: 3}
   - {fileID: 21300000, guid: d51d6d1d2f6f0774bbb9c69b08091dab, type: 3}
   chibiSprite: {fileID: 21300000, guid: 1211411920944a5479a2bab31b919d68, type: 3}
-  playerChibiSprite: {fileID: 0}
+  playerChibiSprite: {fileID: 21300000, guid: c951f7ac0195ca448bc0564b0a08357f, type: 3}
+  chibiHeadSprite: {fileID: 21300000, guid: 8725feafdf92a4e4d902e98179f91d10, type: 3}
   overWorldDialog: {fileID: 11400000, guid: d89495c542198c5489e92fd978a96e8d, type: 2}
   speakerConfig: {fileID: 11400000, guid: f6fbcc7a59cf731489b84d4f312c7efa, type: 2}

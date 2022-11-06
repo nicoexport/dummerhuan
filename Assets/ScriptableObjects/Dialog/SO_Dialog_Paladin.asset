@@ -26,5 +26,18 @@ MonoBehaviour:
       value: 0
     - key: Wha- no! I told you to cease this satanic work.
       value: 1
-    - key: Make me.
+    - key: 
       value: 0
+  allDialogLines:
+  - message: Stop right there, you devilish fool!
+    speaker: 1
+  - message: Excuse me, who are you calling a fool?
+    speaker: 0
+  - message: Do not play dumb. I saw you engaging with the devil himself. Stop that
+      at once or you shall experience the rage of the gods!
+    speaker: 1
+  - message: Hah. And what will your gods do to me? Send me to hell so that Lucifer
+      can embrace me with open arms? Sounds rather cozy.
+    speaker: 0
+  - message: Make me.
+    speaker: 1
