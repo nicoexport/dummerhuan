@@ -42,12 +42,13 @@ namespace Dummerhuan.Combat {
                 insultButtonParent.SetActive(false);
                 
                 var effect = currentEnemy.Value.effectivenesses[intendedInsultType];
+                var response = intendedInsult.GetResponse();
                 
                 yield return playerTextBox.DisplayText_Co("You", intendedInsult.Insult, 0.07f);
                 yield return enemyTextBox.DisplayText_Co("Enemy", "...", 0.3f);
                 var reactionSprite = currentEnemy.Value.reactionSprites[(int)effect];
                 enemyPortrait.SetSpriteTempForSeconds(reactionSprite, 1.5f);
-                yield return enemyTextBox.DisplayText_Co("Enemy", intendedInsult.Response, 0.07f);
+                yield return enemyTextBox.DisplayText_Co("Enemy", response, 0.07f);
 
                 var miniGamePrefab = currentEnemy.Value.GetMiniGamePrefab();
                 

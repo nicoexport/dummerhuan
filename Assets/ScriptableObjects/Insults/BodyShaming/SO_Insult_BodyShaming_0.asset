@@ -13,4 +13,7 @@ MonoBehaviour:
   m_Name: SO_Insult_BodyShaming_0
   m_EditorClassIdentifier: 
   Insult: DU HUAN!
-  Response: NEIN DU!
+  Responses:
+  - Du Wichser!
+  - Ne Du!
+  - Hundling!
