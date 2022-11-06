@@ -1,14 +1,30 @@
+using Dummerhuan.Audio;
+using MyBox;
 using Slothsoft.UnityExtensions;
 using UnityEngine;
 
 namespace Dummerhuan.Combat {
     [CreateAssetMenu(menuName = "ScriptableObjects/Enemy", order = 0)]
     public class EnemySO : ScriptableObject {
-        public Sprite portrait;
         public SerializableKeyValuePairs<InsultType, InsultSO[]> possibleInsults = 
             new();
 
-        public GameObject miniGamePrefab;
+        [Separator]
+        public SerializableKeyValuePairs<InsultType, Effectiveness> effectivenesses;
+        [Separator]
+        public GameObject[] miniGamePrefabs;
+
+        [Separator] 
+        public Sprite idleSprite;
+        public Sprite[] reactionSprites;
+
+        [Separator] 
+        public AudioConfigSo speakerConfig;
+
+        public GameObject GetMiniGamePrefab() {
+            int rand = Random.Range(0, miniGamePrefabs.Length);
+            return miniGamePrefabs[rand];
+        }
 
     }
 }

@@ -34,7 +34,7 @@ Transform:
   - {fileID: 2901593521475782391}
   - {fileID: 2901593520951227505}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2901593520833307088
 MonoBehaviour:
@@ -48,6 +48,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f30869f30eaaa0c4291cbaebe39475f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  durationsInSeconds:
+  - 5
+  - 10
+  - 15
   bulletCollection: {fileID: 11400000, guid: a8c16947a73ac4647a60eb3e9293d0e5, type: 2}
   col: {fileID: 2901593522411232869}
   damageBreakpoint: 10
@@ -99,10 +103,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 2560222804611768507, guid: 8139e99b7dc6ef94eab7a60c45b9f243, type: 3}
-  target: {fileID: 2901593521463194658}
   force: 300
   speed: 80
-  fireRate: 0.7
+  fireRate: 0.2
 --- !u!1 &2901593521459731239
 GameObject:
   m_ObjectHideFlags: 0

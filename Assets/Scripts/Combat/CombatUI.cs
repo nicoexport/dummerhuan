@@ -17,7 +17,7 @@ namespace Dummerhuan.Combat {
             SetEnemySprite();
         }
 
-        private void SetEnemySprite() => enemyPortrait.sprite = currentEnemy.Value.portrait;
+        private void SetEnemySprite() => enemyPortrait.sprite = currentEnemy.Value.idleSprite;
 
         private void SetupButtons() {
             for (int i = 0; i < buttons.Length; i++) {

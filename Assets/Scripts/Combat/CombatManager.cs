@@ -17,15 +17,14 @@ namespace Dummerhuan.Combat {
         [SerializeField] private FloatReference playerCurrentHealth;
         [SerializeField] private TextBoxUI enemyTextBox;
         [SerializeField] private TextBoxUI playerTextBox;
-
-        [SerializeField] private Effectiveness effi;
-
+        [SerializeField] private PortraitUI enemyPortrait;
+        [SerializeField] private GameObject insultButtonParent;
+        
         private InsultSO intendedInsult;
         private Coroutine combatCoroutine;
         private IMiniGame currentMiniGame;
         private InsultType intendedInsultType;
         
-
         protected void Awake() {
             if (combatCoroutine != null) {
                 StopCoroutine(combatCoroutine);
@@ -39,25 +38,40 @@ namespace Dummerhuan.Combat {
         private IEnumerator CombatLoop_Co() {
             while (true) {
                 yield return new WaitUntil(()=>intendedInsult);
-                yield return playerTextBox.DisplayText_Co("You: " + intendedInsult.Insult, 1f);
-                yield return enemyTextBox.DisplayText_Co("Enemy: ...", 0.5f);
-                yield return enemyTextBox.DisplayText_Co("Enemy: " + intendedInsult.Response, 1.5f);
                 
-                var miniGamePrefab = currentEnemy.Value.miniGamePrefab;
+                insultButtonParent.SetActive(false);
+                
+                var effect = currentEnemy.Value.effectivenesses[intendedInsultType];
+                var response = intendedInsult.GetResponse();
+                
+                yield return playerTextBox.DisplayText_Co("You", intendedInsult.Insult, 0.07f);
+                yield return enemyTextBox.DisplayText_Co("Enemy", "...", 0.3f);
+                var reactionSprite = currentEnemy.Value.reactionSprites[(int)effect];
+                enemyPortrait.SetSpriteTempForSeconds(reactionSprite, 1.5f);
+                yield return enemyTextBox.DisplayText_Co("Enemy", response, 0.07f);
+
+                var miniGamePrefab = currentEnemy.Value.GetMiniGamePrefab();
+                
                 var miniGame = Instantiate(miniGamePrefab, transform.position + miniGameSpawnOffset, 
                     quaternion.identity);
                 miniGame.TryGetComponent(out currentMiniGame);
                 if (currentMiniGame != null) {
-                    currentMiniGame.Setup(effi);
+                    currentMiniGame.Setup(effect);
                     yield return currentMiniGame.Execute();
                 }
+
+                enemyPortrait.SetSpriteTempForSeconds(reactionSprite, 1f);
+                yield return new WaitForSeconds(1f);
+                
                 intendedInsult = null;
                 intendedInsultType = InsultType.None;
                 currentMiniGame = null;
+                
                 if (playerCurrentHealth.Value <= 0) {
                     SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
                 }
                 Debug.Log("Turn ended");
+                insultButtonParent.SetActive(true);
             }
         }
 

@@ -13,4 +13,6 @@ MonoBehaviour:
   m_Name: SO_Insult_BodyShaming_1
   m_EditorClassIdentifier: 
   Insult: YOUR TOES SUCK!
-  Response: YOU CAN SUCK MY TOES!
+  Responses:
+  - You can suck on my toes!
+  - Ayooo!
