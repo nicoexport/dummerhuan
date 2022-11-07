@@ -10,6 +10,8 @@ namespace Dummerhuan.Combat {
     public class EnemySO : ScriptableObject {
 
         public BoolReference defeated;
+        public EnemySO nextEnemy;
+        public int corpseCount;
         
         [Separator]
         public SerializableKeyValuePairs<InsultType, InsultSO[]> possibleInsults = 

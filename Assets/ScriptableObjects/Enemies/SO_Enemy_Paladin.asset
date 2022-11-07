@@ -16,6 +16,8 @@ MonoBehaviour:
     _useConstant: 0
     _constantValue: 0
     _variable: {fileID: 11400000, guid: 9e55e2609b2f2cb4f83937ad79cebb60, type: 2}
+  nextEnemy: {fileID: 11400000, guid: 7a799f2c26e0cd74688279726dc30ad1, type: 2}
+  corpseCount: 0
   possibleInsults:
     items:
     - key: 0

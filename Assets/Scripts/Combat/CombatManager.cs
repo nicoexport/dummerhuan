@@ -79,14 +79,13 @@ namespace Dummerhuan.Combat {
                 currentMiniGame = null;
                 
                 if (playerCurrentHealth.Value <= 0) {
-                    currentEnemy.Value.defeated.Value = true;
                     if (currentEnemy.Value == lastEnemy) {
                         yield return SceneManager.LoadSceneAsync(0);
                         Debug.Log("finished");
                         StopCoroutine(combatCoroutine);
-                        
                     }
-                    
+
+                    currentEnemy.Value = currentEnemy.Value.nextEnemy;
                     SceneManager.LoadScene(overWorldSceneIndex);
                 }
                 insultButtonParent.SetActive(true);

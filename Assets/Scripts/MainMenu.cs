@@ -27,12 +27,7 @@ namespace Dummerhuan
         }
 
         public void NewGame() {
-            playerCurrentHealth.Value = playerMaxHealth.Value;
             currentEnemy.Value = null;
-            paladinState.Value = false;
-            aasimarState.Value = false;
-            elfState.Value = false;
-
             SceneManager.LoadScene(2);
         }
 
